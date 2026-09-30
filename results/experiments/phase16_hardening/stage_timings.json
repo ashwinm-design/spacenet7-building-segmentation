@@ -1,0 +1,39 @@
+{
+  "unit": "seconds",
+  "hardware": "CPU (Multi-threaded)",
+  "phase15_reference_f49f31": 38.8,
+  "phase15_reference_abe1a3": 47.46,
+  "phase16_fresh_demo_run": {
+    "analysis_id": "repeat_run_1",
+    "total_runtime_s": 40.44,
+    "stage_timings": {
+      "input_validation": 0.22,
+      "preprocessing": 0.401,
+      "building_inference": 1.798,
+      "building_polygonization": 3.276,
+      "road_extraction": 5.025,
+      "road_fusion": 6.429,
+      "parcel_generation": 22.656,
+      "parcel_intelligence": 0.493,
+      "ready_for_review": 0.119,
+      "total": 40.42
+    }
+  },
+  "all_three_runs_timings": [
+    {
+      "run": 1,
+      "analysis_id": "repeat_run_1",
+      "runtime_s": 40.44
+    },
+    {
+      "run": 2,
+      "analysis_id": "repeat_run_2",
+      "runtime_s": 38.65
+    },
+    {
+      "run": 3,
+      "analysis_id": "repeat_run_3",
+      "runtime_s": 39.82
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "unit": "seconds",
+  "hardware": {
+    "device": "CPU",
+    "threads": "Multi-threaded NumPy/OpenCV/PyTorch"
+  },
+  "runs": {
+    "demo_e2e_f49f31": {
+      "tile": "f49f31",
+      "resolution_px": [1024, 1024],
+      "crs": "EPSG:32732",
+      "stage_timings": {
+        "input_validation": 0.103,
+        "preprocessing": 0.414,
+        "building_inference": 1.462,
+        "building_polygonization": 3.437,
+        "road_extraction": 3.328,
+        "road_fusion": 6.205,
+        "parcel_generation": 23.17,
+        "parcel_intelligence": 0.513,
+        "ready_for_review": 0.17,
+        "total": 38.8
+      },
+      "stage_percentages": {
+        "input_validation": 0.27,
+        "preprocessing": 1.07,
+        "building_inference": 3.77,
+        "building_polygonization": 8.86,
+        "road_extraction": 8.58,
+        "road_fusion": 16.0,
+        "parcel_generation": 59.72,
+        "parcel_intelligence": 1.32,
+        "ready_for_review": 0.44
+      }
+    },
+    "gen_e2e_abe1a3": {
+      "tile": "abe1a3",
+      "resolution_px": [1024, 1024],
+      "crs": "EPSG:32732",
+      "stage_timings": {
+        "input_validation": 0.103,
+        "preprocessing": 0.953,
+        "building_inference": 1.015,
+        "building_polygonization": 2.39,
+        "road_extraction": 3.628,
+        "road_fusion": 11.217,
+        "parcel_generation": 27.594,
+        "parcel_intelligence": 0.447,
+        "ready_for_review": 0.111,
+        "total": 47.46
+      },
+      "stage_percentages": {
+        "input_validation": 0.22,
+        "preprocessing": 2.01,
+        "building_inference": 2.14,
+        "building_polygonization": 5.04,
+        "road_extraction": 7.64,
+        "road_fusion": 23.63,
+        "parcel_generation": 58.14,
+        "parcel_intelligence": 0.94,
+        "ready_for_review": 0.23
+      }
+    }
+  },
+  "bottleneck_analysis": {
+    "primary_bottleneck": "parcel_generation",
+    "primary_bottleneck_pct": "~58-60%",
+    "primary_bottleneck_cause": "Polygon intersection and road buffer subtraction with 250+ polygons",
+    "secondary_bottleneck": "road_fusion",
+    "secondary_bottleneck_pct": "~16-24%",
+    "secondary_bottleneck_cause": "Topological graph construction, path validation, and node clustering",
+    "fastest_subsystems": [
+      "input_validation (0.10s)",
+      "parcel_intelligence (0.45-0.51s)",
+      "ready_for_review (0.11-0.17s)",
+      "preprocessing (0.41-0.95s)"
+    ]
+  }
+}

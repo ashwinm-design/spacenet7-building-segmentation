@@ -1,0 +1,32 @@
+# SIH26012 Demo Dependencies
+# Generated from Phase 16 Environment Audit (Windows 11 AMD64, Python 3.14)
+
+# Core Deep Learning & Computer Vision
+torch==2.14.0
+torchvision==0.29.0
+opencv-python==5.0.0.93
+pillow==12.3.0
+scikit-learn==1.9.1
+scikit-image>=0.22.0
+
+# Geospatial & Computational Geometry
+rasterio==1.5.1
+geopandas==1.2.0
+shapely==2.1.2
+pyproj==3.8.0
+pyogrio==0.13.0
+networkx==3.7
+numpy==2.5.1
+scipy==1.18.0
+
+# Backend REST API & Asynchronous Services
+fastapi==0.141.1
+uvicorn==0.54.0
+pydantic==2.13.5
+python-multipart==0.0.32
+
+# Client & Utility Support
+requests==2.34.2
+httpx==0.28.1
+matplotlib==3.11.1
+pytest>=8.0.0

@@ -1,0 +1,4 @@
+Representation,Total Touching Pairs,Separated Pairs,Separation Rate,Merged Pairs,Merge Rate,Missed Pairs,Miss Rate,Over-Segmentation Rate
+binary_baseline,5322,221,4.15%,52,0.98%,5049,94.87%,0.32%
+3class_interior_only,5322,104,1.95%,15,0.28%,5203,97.76%,0.10%
+3class_growth_1px,5322,194,3.65%,17,0.32%,5111,96.04%,0.46%

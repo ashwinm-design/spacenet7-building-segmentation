@@ -1,0 +1,38 @@
+{
+  "experiment_name": "SpaceNet 7 Full Baseline",
+  "model": "U-Net (ResNet18 ImageNet Encoder)",
+  "parameter_count": 14328209,
+  "input_size": [
+    256,
+    256,
+    3
+  ],
+  "epochs_trained": 25,
+  "best_epoch": 24,
+  "batch_size": 16,
+  "optimizer": "AdamW",
+  "initial_lr": 0.001,
+  "weight_decay": 0.0001,
+  "loss": "50% BCE + 50% Dice",
+  "augmentations": [
+    "horizontal_flip",
+    "vertical_flip",
+    "rotate_90",
+    "random_crop_scale",
+    "brightness_contrast",
+    "gaussian_noise_blur"
+  ],
+  "best_val_metrics": {
+    "epoch": 24,
+    "val_dice": 0.6301,
+    "val_iou": 0.4599
+  },
+  "test_metrics": {
+    "test_loss": 0.26955,
+    "test_dice": 0.6228,
+    "test_iou": 0.4522,
+    "test_precision": 0.5829,
+    "test_recall": 0.6686
+  },
+  "training_duration_s": 799.69
+}

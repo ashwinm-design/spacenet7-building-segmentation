@@ -1,0 +1,96 @@
+{
+  "dataset_name": "SpaceNet 7 3-Class Semantic Segmentation Dataset",
+  "aoi": "L15-0506E-1204N_2027_3374_13",
+  "patch_size": [
+    256,
+    256
+  ],
+  "stride": 256,
+  "classes": {
+    "0": "Background",
+    "1": "Building Interior",
+    "2": "Building Boundary"
+  },
+  "boundary_specification": {
+    "method": "Per-polygon inner erosion via 3x3 structuring element",
+    "boundary_width_isolated_pixels": 1,
+    "boundary_width_touching_pixels": 2,
+    "boundary_within_footprint_only": true,
+    "boundary_priority_over_interior": true
+  },
+  "total_scenes": 24,
+  "total_patches": 384,
+  "split_patch_counts": {
+    "train": 256,
+    "val": 64,
+    "test": 64
+  },
+  "pixel_counts": {
+    "background": 23835084,
+    "interior": 457554,
+    "boundary": 873186,
+    "total": 25165824
+  },
+  "pixel_percentages": {
+    "background": 94.7121,
+    "interior": 1.8182,
+    "boundary": 3.4697
+  },
+  "patch_analysis": {
+    "total_empty_patches": 23,
+    "empty_patches_pct": 5.99,
+    "total_touching_adjacent_patches": 336,
+    "touching_adjacent_patches_pct": 87.5
+  },
+  "split_breakdown": {
+    "train": {
+      "bg_pixels": 15905805,
+      "interior_pixels": 299321,
+      "boundary_pixels": 572090,
+      "total_pixels": 16777216,
+      "empty_patches": 16,
+      "touching_patches": 224,
+      "patches": 256,
+      "bg_pct": 94.806,
+      "interior_pct": 1.7841,
+      "boundary_pct": 3.4099,
+      "empty_patches_pct": 6.25,
+      "touching_patches_pct": 87.5
+    },
+    "val": {
+      "bg_pixels": 3965343,
+      "interior_pixels": 78872,
+      "boundary_pixels": 150089,
+      "total_pixels": 4194304,
+      "empty_patches": 4,
+      "touching_patches": 56,
+      "patches": 64,
+      "bg_pct": 94.5411,
+      "interior_pct": 1.8805,
+      "boundary_pct": 3.5784,
+      "empty_patches_pct": 6.25,
+      "touching_patches_pct": 87.5
+    },
+    "test": {
+      "bg_pixels": 3963936,
+      "interior_pixels": 79361,
+      "boundary_pixels": 151007,
+      "total_pixels": 4194304,
+      "empty_patches": 3,
+      "touching_patches": 56,
+      "patches": 64,
+      "bg_pct": 94.5076,
+      "interior_pct": 1.8921,
+      "boundary_pct": 3.6003,
+      "empty_patches_pct": 4.69,
+      "touching_patches_pct": 87.5
+    }
+  },
+  "verification": {
+    "all_pixels_valid_class": true,
+    "no_nan_values": true,
+    "dimensions_consistent_256x256": true,
+    "split_counts_match_existing": true
+  },
+  "elapsed_seconds": 12.49
+}

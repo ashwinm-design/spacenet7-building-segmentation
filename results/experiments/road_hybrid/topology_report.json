@@ -1,0 +1,17 @@
+{
+  "best_configuration": "hybrid_dl_recovery_gap_10dm",
+  "valid_polygons": 4,
+  "invalid_polygons": 0,
+  "self_intersections": 0,
+  "empty_geometries": 0,
+  "component_count": 4,
+  "total_area_m2": 17115.59,
+  "total_length_m": 1580.55,
+  "median_width_m": 4.09,
+  "building_intersection_area_m2": 0.0,
+  "source_evidence_breakdown": {
+    "both": 37,
+    "classical": 104,
+    "deep_learning": 11
+  }
+}

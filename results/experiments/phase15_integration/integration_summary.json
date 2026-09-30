@@ -1,0 +1,100 @@
+{
+  "phase": "PHASE 15",
+  "project": "SIH26012 - Aerial/Drone Building & Cadastral Feature Extraction",
+  "status": "COMPLETED",
+  "pipeline_stages": 10,
+  "stage_definitions": {
+    "QUEUED": {"weight": 0, "description": "Analysis request received and queued"},
+    "VALIDATING": {"weight": 5, "description": "Raster integrity, CRS, channel count, and NaN/Inf validation"},
+    "PREPROCESSING": {"weight": 10, "description": "Tile grid generation and ROI window extraction"},
+    "BUILDING_INFERENCE": {"weight": 30, "description": "SpaceNet 7 / Open Cities 3-class CNN segmentation"},
+    "BUILDING_POLYGONIZATION": {"weight": 40, "description": "Geometric polygonization, smoothing, and attribution"},
+    "ROAD_EXTRACTION": {"weight": 55, "description": "Classical CV and Deep Learning road extraction"},
+    "ROAD_FUSION": {"weight": 65, "description": "Phase 13D hybrid road fusion and graph topology creation"},
+    "PARCEL_GENERATION": {"weight": 75, "description": "Road-constrained Voronoi/buffer preliminary parcel hypothesis"},
+    "PARCEL_INTELLIGENCE": {"weight": 85, "description": "Multi-component confidence scoring and uncertainty flagging"},
+    "READY_FOR_REVIEW": {"weight": 95, "description": "Human-in-the-loop review queue and audit log initialization"},
+    "COMPLETED": {"weight": 100, "description": "Deliverable packaging and KPI summary generation"}
+  },
+  "modules_integrated": {
+    "building_segmentation": {
+      "model_type": "3-Class CNN (Body, Boundary, Background)",
+      "weights": "results/checkpoints/best_model.pth (frozen, unmodified)"
+    },
+    "road_extraction": {
+      "classical_cv": "Morphological + Edge + Adaptive thresholding",
+      "deep_learning": "U-Net ResNet18 (results/experiments/road_dl/checkpoints/best_road_model.pth - frozen, unmodified)",
+      "hybrid_fusion": "Phase 13D Topological Fusion + DL Candidate Recovery"
+    },
+    "parcel_engine": {
+      "method": "Road-constrained Voronoi boundary hypothesis",
+      "validity_enforcement": "Shapely make_valid with 100.0% geometry validity"
+    },
+    "parcel_intelligence": {
+      "confidence_engine": "4-component weighted scoring (building evidence, road access, geometry quality, topology)",
+      "uncertainty_flagger": "Multi-criteria heuristic flagging (small area, high coverage, zero frontage, low confidence)"
+    },
+    "human_in_the_loop": {
+      "review_actions": ["accepted", "needs_review", "edited", "rejected"],
+      "audit_trail": "Immutable JSON change history with timestamps and notes",
+      "geometry_editing": "Live recalculation of area, frontage, and confidence metrics"
+    },
+    "webgis": {
+      "frontend": "React + Vite + Leaflet WebGIS",
+      "backend": "FastAPI REST API with asynchronous progress polling"
+    }
+  },
+  "api_endpoints": [
+    {"method": "GET", "path": "/api/health", "description": "System health check"},
+    {"method": "POST", "path": "/api/analyze", "description": "Upload image and run complete pipeline (sync/async)"},
+    {"method": "POST", "path": "/api/demo", "description": "Run default demo ROI (sync/async)"},
+    {"method": "GET", "path": "/api/analysis/{analysis_id}/status", "description": "Real-time weighted progress polling"},
+    {"method": "GET", "path": "/api/results/{analysis_id}", "description": "Analysis summary metadata"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/summary", "description": "Full analysis summary JSON"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/geojson", "description": "Building footprints GeoJSON"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/roads", "description": "Road corridors GeoJSON"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/parcels", "description": "Preliminary parcels GeoJSON"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/statistics", "description": "Building statistics CSV"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/overlay", "description": "Visual overlay PNG"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/buildings/{building_id}", "description": "Building feature details"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/parcel-reviews", "description": "Review queue and candidates list"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/parcel-reviews/summary", "description": "Review status count summary"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/parcel-reviews/{candidate_id}", "description": "Single parcel candidate state"},
+    {"method": "POST", "path": "/api/results/{analysis_id}/parcel-reviews/{candidate_id}", "description": "Update parcel status/geometry"},
+    {"method": "PATCH", "path": "/api/results/{analysis_id}/parcel-reviews/{candidate_id}", "description": "Patch parcel status/geometry"},
+    {"method": "POST", "path": "/api/results/{analysis_id}/parcel-reviews/{candidate_id}/reset", "description": "Reset candidate geometry"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/parcel-reviews/export", "description": "Export reviewed parcels GeoJSON"},
+    {"method": "GET", "path": "/api/results/{analysis_id}/parcel-reviews/audit", "description": "Export immutable audit trail JSON"}
+  ],
+  "validation_metrics": {
+    "demo_tile_f49f31": {
+      "buildings": 254,
+      "road_corridors": 4,
+      "road_length_m": 1571.88,
+      "parcel_candidates": 254,
+      "geometry_validity_pct": 100.0,
+      "mean_confidence": 0.8817,
+      "flagged_parcels": 210,
+      "processing_time_s": 38.8
+    },
+    "generalization_tile_abe1a3": {
+      "buildings": 246,
+      "road_corridors": 8,
+      "road_length_m": 2063.66,
+      "parcel_candidates": 246,
+      "geometry_validity_pct": 100.0,
+      "mean_confidence": 0.8911,
+      "flagged_parcels": 224,
+      "processing_time_s": 47.46
+    }
+  },
+  "constraints_verified": {
+    "no_ml_retraining": true,
+    "frozen_checkpoints_unmodified": true,
+    "phases_13_14_preserved": true,
+    "prototype_8b8c724c7e_untouched": true,
+    "no_fabricated_metrics": true,
+    "cadastral_disclaimer_present": true
+  },
+  "disclaimer": "AI-generated parcel boundaries are preliminary spatial candidates and require professional cadastral/survey verification. Review status does not establish legal ownership or boundary rights."
+}

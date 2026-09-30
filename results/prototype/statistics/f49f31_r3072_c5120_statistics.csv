@@ -1,0 +1,17 @@
+id,area,perimeter,area_unit,perimeter_unit,centroid_x,centroid_y,confidence,min_confidence,is_georeferenced
+1,28.0,31.71,pixels^2,pixels,201.03,2.47,0.6562,0.3952,False
+2,1185.0,174.05,pixels^2,pixels,235.49,13.79,0.8989,0.3257,False
+3,27.0,37.24,pixels^2,pixels,74.51,67.86,0.5448,0.3473,False
+4,8616.0,1138.88,pixels^2,pixels,63.29,37.8,0.9205,0.2837,False
+5,640.0,151.3,pixels^2,pixels,94.26,82.64,0.841,0.4588,False
+6,304.0,124.47,pixels^2,pixels,5.51,140.47,0.7471,0.3497,False
+7,459.0,150.36,pixels^2,pixels,246.43,182.73,0.7311,0.4259,False
+8,26.0,36.83,pixels^2,pixels,84.57,205.65,0.6384,0.4519,False
+9,18653.0,1932.37,pixels^2,pixels,168.57,134.02,0.922,0.2482,False
+10,1741.0,236.14,pixels^2,pixels,167.52,209.86,0.9036,0.3389,False
+11,1542.0,202.36,pixels^2,pixels,72.4,235.16,0.9692,0.5155,False
+12,3425.0,575.96,pixels^2,pixels,28.62,214.0,0.9158,0.3981,False
+13,21.0,34.47,pixels^2,pixels,169.47,254.98,0.6529,0.5842,False
+14,1332.0,205.84,pixels^2,pixels,214.9,235.85,0.9162,0.3944,False
+15,326.0,132.66,pixels^2,pixels,246.99,247.59,0.8253,0.5078,False
+16,118.0,60.68,pixels^2,pixels,96.98,252.72,0.7781,0.5499,False

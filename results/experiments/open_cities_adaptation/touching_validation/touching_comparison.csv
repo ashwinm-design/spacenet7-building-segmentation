@@ -1,0 +1,13 @@
+Metric,Zero-Shot (20cm),Fine-Tuned (SpaceNet Init),ImageNet Ablation
+total_touching_pairs,856,856,856
+separated_pairs,29,212,307
+merged_pairs,2,512,437
+missed_pairs,825,132,112
+oversegmented_bldgs,7,9,8
+total_touching_bldgs,975,975,975
+global_separation_rate,0.0339,0.2477,0.3586
+global_merge_rate,0.0023,0.5981,0.5105
+global_miss_rate,0.9638,0.1542,0.1308
+oversegmentation_rate,0.0072,0.0092,0.0082
+detected_pair_separation_rate,93.55,29.28,41.26
+detected_pair_merge_rate,6.45,70.72,58.74

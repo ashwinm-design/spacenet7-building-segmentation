@@ -1,0 +1,10 @@
+{
+  "valid_polygons": 6,
+  "invalid_polygons": 0,
+  "self_intersections": 0,
+  "empty_geometries": 0,
+  "component_count": 6,
+  "total_area_m2": 16366.52,
+  "mean_estimated_width_m": 16.43,
+  "building_intersection_area_m2": 0.0
+}

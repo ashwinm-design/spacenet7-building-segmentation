@@ -1,0 +1,44 @@
+{
+  "finetuned_primary": {
+    "total_touching_pairs": 856,
+    "separated_pairs": 212,
+    "merged_pairs": 512,
+    "missed_pairs": 132,
+    "oversegmented_bldgs": 9,
+    "total_touching_bldgs": 975,
+    "global_separation_rate": 0.2477,
+    "global_merge_rate": 0.5981,
+    "global_miss_rate": 0.1542,
+    "oversegmentation_rate": 0.0092,
+    "detected_pair_separation_rate": 29.28,
+    "detected_pair_merge_rate": 70.72
+  },
+  "zero_shot_reference": {
+    "total_touching_pairs": 856,
+    "separated_pairs": 29,
+    "merged_pairs": 2,
+    "missed_pairs": 825,
+    "oversegmented_bldgs": 7,
+    "total_touching_bldgs": 975,
+    "global_separation_rate": 0.0339,
+    "global_merge_rate": 0.0023,
+    "global_miss_rate": 0.9638,
+    "oversegmentation_rate": 0.0072,
+    "detected_pair_separation_rate": 93.55,
+    "detected_pair_merge_rate": 6.45
+  },
+  "imagenet_ablation": {
+    "total_touching_pairs": 856,
+    "separated_pairs": 307,
+    "merged_pairs": 437,
+    "missed_pairs": 112,
+    "oversegmented_bldgs": 8,
+    "total_touching_bldgs": 975,
+    "global_separation_rate": 0.3586,
+    "global_merge_rate": 0.5105,
+    "global_miss_rate": 0.1308,
+    "oversegmentation_rate": 0.0082,
+    "detected_pair_separation_rate": 41.26,
+    "detected_pair_merge_rate": 58.74
+  }
+}

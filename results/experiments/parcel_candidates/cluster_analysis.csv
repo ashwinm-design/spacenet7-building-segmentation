@@ -1,0 +1,6 @@
+distance_threshold_m,total_buildings,total_clusters,isolated_buildings,small_clusters_2_to_5,medium_clusters_6_to_20,large_clusters_gt_20,mean_cluster_size,median_cluster_size,max_cluster_size
+5.0,254,16,9,4,0,3,15.875,1.0,100
+10.0,254,9,5,3,0,1,28.22222222222222,1.0,240
+15.0,254,4,1,1,1,1,63.5,4.5,244
+20.0,254,3,1,1,0,1,84.66666666666667,2.0,251
+30.0,254,1,0,0,0,1,254.0,254.0,254

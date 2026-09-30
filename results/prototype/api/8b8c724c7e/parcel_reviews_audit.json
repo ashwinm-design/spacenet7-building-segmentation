@@ -1,0 +1,371 @@
+[
+  {
+    "candidate_id": 6,
+    "old_status": "unreviewed",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Verified clear access and valid boundary.",
+    "timestamp": "2026-09-30T04:11:36.088792+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "unreviewed",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Multi-source conflict between CV and DL roads.",
+    "timestamp": "2026-09-30T04:11:36.287227+00:00"
+  },
+  {
+    "candidate_id": 10,
+    "old_status": "unreviewed",
+    "new_status": "rejected",
+    "old_geometry_hash": "628dcd5f1f30",
+    "new_geometry_hash": "628dcd5f1f30",
+    "reviewer_note": "Uninhabitable sliver geometry along fence line.",
+    "timestamp": "2026-09-30T04:11:36.496113+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "unreviewed",
+    "new_status": "edited",
+    "old_geometry_hash": "f0e113e39e46",
+    "new_geometry_hash": "a4ce8c2c9e1d",
+    "reviewer_note": "Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:11:36.696973+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "unreviewed",
+    "old_geometry_hash": "a4ce8c2c9e1d",
+    "new_geometry_hash": "f0e113e39e46",
+    "reviewer_note": "Reset geometry to AI original: Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:11:37.228464+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Verified clear access and valid boundary.",
+    "timestamp": "2026-09-30T04:12:07.367931+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Multi-source conflict between CV and DL roads.",
+    "timestamp": "2026-09-30T04:12:07.574053+00:00"
+  },
+  {
+    "candidate_id": 10,
+    "old_status": "rejected",
+    "new_status": "rejected",
+    "old_geometry_hash": "628dcd5f1f30",
+    "new_geometry_hash": "628dcd5f1f30",
+    "reviewer_note": "Uninhabitable sliver geometry along fence line.",
+    "timestamp": "2026-09-30T04:12:07.772356+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "unreviewed",
+    "new_status": "edited",
+    "old_geometry_hash": "f0e113e39e46",
+    "new_geometry_hash": "a4ce8c2c9e1d",
+    "reviewer_note": "Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:12:08.056765+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "unreviewed",
+    "old_geometry_hash": "a4ce8c2c9e1d",
+    "new_geometry_hash": "f0e113e39e46",
+    "reviewer_note": "Reset geometry to AI original: Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:12:08.542745+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Boundary conflicts with neighbor footprint; recommended field cadastral survey.",
+    "timestamp": "2026-09-30T04:18:23.173966+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "unreviewed",
+    "new_status": "edited",
+    "old_geometry_hash": "f0e113e39e46",
+    "new_geometry_hash": "bcc633719168",
+    "reviewer_note": "Manually adjusted NE boundary corner to conform to visible physical pathway.",
+    "timestamp": "2026-09-30T04:18:23.382540+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Boundary aligns cleanly with road frontage (13.6m) and structure footprints.",
+    "timestamp": "2026-09-30T04:18:23.757350+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Boundary conflicts with neighbor footprint; recommended field cadastral survey.",
+    "timestamp": "2026-09-30T04:22:31.334878+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "edited",
+    "old_geometry_hash": "bcc633719168",
+    "new_geometry_hash": "bcc633719168",
+    "reviewer_note": "Manually adjusted NE boundary corner to conform to visible physical pathway.",
+    "timestamp": "2026-09-30T04:22:31.592608+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Boundary aligns cleanly with road frontage (13.6m) and structure footprints.",
+    "timestamp": "2026-09-30T04:22:31.929505+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Verified clear access and valid boundary.",
+    "timestamp": "2026-09-30T04:45:25.796383+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Multi-source conflict between CV and DL roads.",
+    "timestamp": "2026-09-30T04:45:25.888276+00:00"
+  },
+  {
+    "candidate_id": 10,
+    "old_status": "rejected",
+    "new_status": "rejected",
+    "old_geometry_hash": "628dcd5f1f30",
+    "new_geometry_hash": "628dcd5f1f30",
+    "reviewer_note": "Uninhabitable sliver geometry along fence line.",
+    "timestamp": "2026-09-30T04:45:25.987722+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "edited",
+    "old_geometry_hash": "bcc633719168",
+    "new_geometry_hash": "a4ce8c2c9e1d",
+    "reviewer_note": "Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:45:26.127724+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "unreviewed",
+    "old_geometry_hash": "a4ce8c2c9e1d",
+    "new_geometry_hash": "f0e113e39e46",
+    "reviewer_note": "Reset geometry to AI original: Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:45:26.442993+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Verified clear access and valid boundary.",
+    "timestamp": "2026-09-30T04:54:33.254797+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Multi-source conflict between CV and DL roads.",
+    "timestamp": "2026-09-30T04:54:33.381377+00:00"
+  },
+  {
+    "candidate_id": 10,
+    "old_status": "rejected",
+    "new_status": "rejected",
+    "old_geometry_hash": "628dcd5f1f30",
+    "new_geometry_hash": "628dcd5f1f30",
+    "reviewer_note": "Uninhabitable sliver geometry along fence line.",
+    "timestamp": "2026-09-30T04:54:33.514929+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "unreviewed",
+    "new_status": "edited",
+    "old_geometry_hash": "f0e113e39e46",
+    "new_geometry_hash": "a4ce8c2c9e1d",
+    "reviewer_note": "Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:54:33.733491+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "unreviewed",
+    "old_geometry_hash": "a4ce8c2c9e1d",
+    "new_geometry_hash": "f0e113e39e46",
+    "reviewer_note": "Reset geometry to AI original: Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:54:34.535933+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Verified clear access and valid boundary.",
+    "timestamp": "2026-09-30T04:55:54.703856+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Multi-source conflict between CV and DL roads.",
+    "timestamp": "2026-09-30T04:55:54.884371+00:00"
+  },
+  {
+    "candidate_id": 10,
+    "old_status": "rejected",
+    "new_status": "rejected",
+    "old_geometry_hash": "628dcd5f1f30",
+    "new_geometry_hash": "628dcd5f1f30",
+    "reviewer_note": "Uninhabitable sliver geometry along fence line.",
+    "timestamp": "2026-09-30T04:55:55.039856+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "unreviewed",
+    "new_status": "edited",
+    "old_geometry_hash": "f0e113e39e46",
+    "new_geometry_hash": "a4ce8c2c9e1d",
+    "reviewer_note": "Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:55:55.304838+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "unreviewed",
+    "old_geometry_hash": "a4ce8c2c9e1d",
+    "new_geometry_hash": "f0e113e39e46",
+    "reviewer_note": "Reset geometry to AI original: Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:55:55.646966+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Verified clear access and valid boundary.",
+    "timestamp": "2026-09-30T04:59:03.834447+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Multi-source conflict between CV and DL roads.",
+    "timestamp": "2026-09-30T04:59:04.020761+00:00"
+  },
+  {
+    "candidate_id": 10,
+    "old_status": "rejected",
+    "new_status": "rejected",
+    "old_geometry_hash": "628dcd5f1f30",
+    "new_geometry_hash": "628dcd5f1f30",
+    "reviewer_note": "Uninhabitable sliver geometry along fence line.",
+    "timestamp": "2026-09-30T04:59:04.187417+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "unreviewed",
+    "new_status": "edited",
+    "old_geometry_hash": "f0e113e39e46",
+    "new_geometry_hash": "a4ce8c2c9e1d",
+    "reviewer_note": "Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:59:04.302999+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "unreviewed",
+    "old_geometry_hash": "a4ce8c2c9e1d",
+    "new_geometry_hash": "f0e113e39e46",
+    "reviewer_note": "Reset geometry to AI original: Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T04:59:04.591366+00:00"
+  },
+  {
+    "candidate_id": 6,
+    "old_status": "accepted",
+    "new_status": "accepted",
+    "old_geometry_hash": "c5fd19fb5b14",
+    "new_geometry_hash": "c5fd19fb5b14",
+    "reviewer_note": "Verified clear access and valid boundary.",
+    "timestamp": "2026-09-30T05:07:51.734059+00:00"
+  },
+  {
+    "candidate_id": 56,
+    "old_status": "needs_review",
+    "new_status": "needs_review",
+    "old_geometry_hash": "d7892823a469",
+    "new_geometry_hash": "d7892823a469",
+    "reviewer_note": "Multi-source conflict between CV and DL roads.",
+    "timestamp": "2026-09-30T05:07:51.858880+00:00"
+  },
+  {
+    "candidate_id": 10,
+    "old_status": "rejected",
+    "new_status": "rejected",
+    "old_geometry_hash": "628dcd5f1f30",
+    "new_geometry_hash": "628dcd5f1f30",
+    "reviewer_note": "Uninhabitable sliver geometry along fence line.",
+    "timestamp": "2026-09-30T05:07:51.973614+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "unreviewed",
+    "new_status": "edited",
+    "old_geometry_hash": "f0e113e39e46",
+    "new_geometry_hash": "a4ce8c2c9e1d",
+    "reviewer_note": "Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T05:07:52.098247+00:00"
+  },
+  {
+    "candidate_id": 12,
+    "old_status": "edited",
+    "new_status": "unreviewed",
+    "old_geometry_hash": "a4ce8c2c9e1d",
+    "new_geometry_hash": "f0e113e39e46",
+    "reviewer_note": "Reset geometry to AI original: Aligned southern edge with physical access path.",
+    "timestamp": "2026-09-30T05:07:52.396099+00:00"
+  }
+]

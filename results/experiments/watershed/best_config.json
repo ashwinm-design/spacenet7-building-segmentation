@@ -1,0 +1,30 @@
+{
+  "method": "Marker-Controlled Watershed on Euclidean Distance Transform",
+  "best_config_id": "t0.40_d5_a10",
+  "probability_threshold": 0.4,
+  "min_distance_peak": 5,
+  "min_polygon_area_pixels": 10.0,
+  "metrics": {
+    "method": "Watershed",
+    "config_id": "t0.40_d5_a10",
+    "threshold": 0.4,
+    "min_distance": 5,
+    "min_area": 10.0,
+    "pred_polygon_count": 4376,
+    "gt_polygon_count": 6344,
+    "matched_count_iou50": 702,
+    "unmatched_pred_fp": 3674,
+    "missed_gt_fn": 5642,
+    "area_iou": 0.3634,
+    "area_precision": 0.7011,
+    "area_recall": 0.4232,
+    "polygon_iou_matched": 0.5904,
+    "obj_f1_iou50": 0.131,
+    "obj_precision_iou50": 0.1604,
+    "obj_recall_iou50": 0.1107,
+    "obj_f1_iou25": 0.494,
+    "obj_precision_iou25": 0.6051,
+    "obj_recall_iou25": 0.4174,
+    "eval_time_s": 12.91
+  }
+}

@@ -1,0 +1,5 @@
+Configuration,candidate_count,valid_geometries,valid_geometry_pct,pairwise_overlaps,total_overlap_area_m2,total_parcel_area_m2,mean_candidate_area_m2,median_candidate_area_m2,mean_building_coverage,median_building_coverage,road_adjacent_candidates,road_adjacency_pct,mean_road_frontage_m,mean_road_distance_m,mean_candidate_score,median_candidate_score
+Phase 13A (Unconstrained Voronoi),254,254,100.0,0,0.0,41203.83,162.22,154.82,0.3971,0.1071,0,0.0,0.0,0.0,0.7908,0.7681
+Phase 13B (Classical Road Constrained),254,254,100.0,0,0.0,28477.99,112.12,99.83,0.4619,0.1814,202,79.53,11.72,0.88,0.7847,0.7809
+Phase 13C (Deep-Learning Road Constrained),254,254,100.0,0,0.0,37625.46,148.13,143.11,0.4196,0.119,140,55.12,7.27,4.03,0.7331,0.7253
+Phase 13D (Hybrid Road Constrained),254,254,100.0,0,0.0,27473.61,108.16,94.5,0.4825,0.2362,209,82.28,12.65,0.78,0.7889,0.7901

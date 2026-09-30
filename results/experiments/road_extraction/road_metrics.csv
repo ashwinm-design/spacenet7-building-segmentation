@@ -1,0 +1,2 @@
+road_component_count,total_extracted_road_area_m2,total_extracted_road_length_m,mean_estimated_width_m,median_estimated_width_m,valid_geometry_pct,roi_coverage_pct,building_intersection_count,building_intersection_area_m2,ground_truth_status,extraction_time_seconds,roi_width_px,roi_height_px,crs
+6,16366.52,370.74,16.43,3.75,100.0,39.02,0,0.0,No authoritative road ground-truth layer was available; therefore road accuracy is not reported.,3.233,1024,1024,EPSG:32732

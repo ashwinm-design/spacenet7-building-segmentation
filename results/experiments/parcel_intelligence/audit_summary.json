@@ -1,0 +1,318 @@
+{
+  "phase": "14A",
+  "title": "Parcel Intelligence & Explainable Confidence Audit",
+  "timestamp": "2026-09-30 03:38:43 UTC",
+  "execution_time_seconds": 0.379,
+  "input_summary": {
+    "total_candidates": 254,
+    "crs": "EPSG:32732"
+  },
+  "confidence_distribution": {
+    "total_candidates": 254,
+    "mean_confidence": 0.8814,
+    "median_confidence": 0.8946,
+    "std_confidence": 0.0776,
+    "min_confidence": 0.6254,
+    "max_confidence": 1.0,
+    "percentile_25": 0.8295,
+    "percentile_75": 0.9395,
+    "band_distribution": {
+      "HIGH": 237,
+      "MODERATE": 17,
+      "LOW": 0,
+      "VERY_LOW": 0
+    },
+    "band_percentages": {
+      "HIGH": 93.31,
+      "MODERATE": 6.69,
+      "LOW": 0.0,
+      "VERY_LOW": 0.0
+    }
+  },
+  "flag_summary": {
+    "total_candidates": 254,
+    "candidates_with_flags": 209,
+    "candidates_without_flags": 45,
+    "flag_rate_pct": 82.28,
+    "total_flags_raised": 327,
+    "mean_flags_per_candidate": 1.29,
+    "flag_type_distribution": {
+      "MULTI_SOURCE_CONFLICT": 169,
+      "WEAK_BUILDING_EVIDENCE": 115,
+      "UNDERSIZED_PARCEL": 30,
+      "WEAK_ROAD_EVIDENCE": 11,
+      "NEEDS_BOUNDARY_REVIEW": 2
+    },
+    "severity_distribution": {
+      "CRITICAL": 0,
+      "WARNING": 128,
+      "INFO": 199
+    }
+  },
+  "top_bottom_cases": {
+    "top_n": [
+      {
+        "parcel_id": 29,
+        "confidence": 1.0,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 0
+      },
+      {
+        "parcel_id": 33,
+        "confidence": 1.0,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 0
+      },
+      {
+        "parcel_id": 53,
+        "confidence": 1.0,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 0
+      },
+      {
+        "parcel_id": 84,
+        "confidence": 1.0,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 0
+      },
+      {
+        "parcel_id": 159,
+        "confidence": 1.0,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 0
+      },
+      {
+        "parcel_id": 75,
+        "confidence": 0.9906,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 1
+      },
+      {
+        "parcel_id": 103,
+        "confidence": 0.9906,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 1
+      },
+      {
+        "parcel_id": 151,
+        "confidence": 0.9906,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 1
+      },
+      {
+        "parcel_id": 221,
+        "confidence": 0.9906,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 1
+      },
+      {
+        "parcel_id": 248,
+        "confidence": 0.9906,
+        "confidence_band": "HIGH",
+        "strengths": [
+          "geometry_quality",
+          "building_evidence",
+          "road_access",
+          "topological_plausibility"
+        ],
+        "flag_count": 1
+      }
+    ],
+    "bottom_n": [
+      {
+        "parcel_id": 162,
+        "confidence": 0.718,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE"
+        ],
+        "flag_count": 1
+      },
+      {
+        "parcel_id": 182,
+        "confidence": 0.7046,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "WEAK_ROAD_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 3
+      },
+      {
+        "parcel_id": 52,
+        "confidence": 0.702,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence",
+          "road_access"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 2
+      },
+      {
+        "parcel_id": 85,
+        "confidence": 0.6954,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 2
+      },
+      {
+        "parcel_id": 230,
+        "confidence": 0.6863,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 2
+      },
+      {
+        "parcel_id": 240,
+        "confidence": 0.6766,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence",
+          "road_access"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE"
+        ],
+        "flag_count": 1
+      },
+      {
+        "parcel_id": 199,
+        "confidence": 0.6646,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 2
+      },
+      {
+        "parcel_id": 49,
+        "confidence": 0.6561,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence",
+          "road_access"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 2
+      },
+      {
+        "parcel_id": 243,
+        "confidence": 0.6468,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence",
+          "road_access"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 2
+      },
+      {
+        "parcel_id": 56,
+        "confidence": 0.6254,
+        "confidence_band": "MODERATE",
+        "weaknesses": [
+          "building_evidence"
+        ],
+        "flags": [
+          "WEAK_BUILDING_EVIDENCE",
+          "MULTI_SOURCE_CONFLICT"
+        ],
+        "flag_count": 2
+      }
+    ]
+  },
+  "weights": {
+    "geometry_quality": 0.25,
+    "building_evidence": 0.3,
+    "road_access": 0.25,
+    "topological_plausibility": 0.2
+  },
+  "disclaimer": "All confidence scores measure AI inference quality and geometric plausibility. They do NOT represent legal cadastral certainty or property ownership. All boundaries are preliminary AI-assisted candidates requiring professional survey validation."
+}

@@ -1,0 +1,44 @@
+{
+  "dataset": "Open Cities AI \u2014 Pointe-Noire (ptn), train_tier_1",
+  "scenes": [
+    "f49f31",
+    "abe1a3"
+  ],
+  "gsd_m": 0.2,
+  "patch_size": 256,
+  "stride": 256,
+  "nodata_threshold": 0.1,
+  "boundary_method": "3x3 morphological erosion, 1 iteration (SAME algorithm as SpaceNet)",
+  "boundary_physical_width_m": 0.2,
+  "spacenet_boundary_physical_width_m": 1.0,
+  "boundary_difference_note": "SpaceNet uses 1px erosion at 1.0m GSD = 1.0m physical boundary width. Open Cities uses 1px erosion at 0.20m GSD = 0.20m physical boundary width. Both use the identical morphological structuring element (3x3 rect, 1 iteration).",
+  "total_patches": 1300,
+  "valid_patches": 649,
+  "discarded_patches": 651,
+  "empty_patches": 37,
+  "dense_patches_15plus": 447,
+  "touching_patches": 529,
+  "min_buildings_per_patch": 0,
+  "max_buildings_per_patch": 44,
+  "mean_buildings_per_patch": 17.58,
+  "scene_stats": {
+    "f49f31": {
+      "num_polygons": 2596,
+      "tiny_polygons": 0,
+      "building_pixels": 5010810,
+      "bg_pixels": 22631115,
+      "interior_pixels": 4453417,
+      "boundary_pixels": 557393,
+      "rasterize_time_s": 1.48
+    },
+    "abe1a3": {
+      "num_polygons": 6135,
+      "tiny_polygons": 0,
+      "building_pixels": 10133691,
+      "bg_pixels": 50916389,
+      "interior_pixels": 8842560,
+      "boundary_pixels": 1291131,
+      "rasterize_time_s": 2.9
+    }
+  }
+}

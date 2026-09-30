@@ -1,0 +1,144 @@
+{
+  "phase": "Phase 16 — Demo Hardening",
+  "audit_timestamp": "2026-09-30T05:27:00Z",
+  "categories": {
+    "required_for_demo": [
+      {
+        "path": "data/open_cities_raw/ptn/f49f31/f49f31.tif",
+        "format": "GeoTIFF (Raster)",
+        "file_size_bytes": 11604988,
+        "file_size_mb": 11.07,
+        "dimensions": [4185, 6605],
+        "bands": 4,
+        "crs": "EPSG:32732",
+        "purpose": "Primary live demo orthomosaic tile. Standard evaluation ROI: (3072, 2048, 4096, 3072)."
+      },
+      {
+        "path": "data/open_cities_raw/ptn/abe1a3/abe1a3.tif",
+        "format": "GeoTIFF (Raster)",
+        "file_size_bytes": 244196444,
+        "file_size_mb": 232.88,
+        "dimensions": [7787, 7840],
+        "bands": 4,
+        "crs": "EPSG:32732",
+        "purpose": "Secondary generalization demo tile to prove cross-tile adaptability without hardcoding."
+      },
+      {
+        "path": "results/checkpoints/best_model.pth",
+        "format": "PyTorch Checkpoint (.pth)",
+        "file_size_bytes": 172125275,
+        "file_size_mb": 164.15,
+        "purpose": "Weights for SpaceNet 7 3-class building segmentation inference."
+      },
+      {
+        "path": "results/experiments/road_dl/checkpoints/best_road_model.pth",
+        "format": "PyTorch Checkpoint (.pth)",
+        "file_size_bytes": 57423539,
+        "file_size_mb": 54.76,
+        "purpose": "Weights for ResNet18 U-Net deep learning road extraction."
+      }
+    ],
+    "optional_research_and_validation": [
+      {
+        "path": "data/open_cities_raw/ptn/f49f31/f49f31.geojson",
+        "format": "GeoJSON (Vector)",
+        "file_size_bytes": 577419,
+        "purpose": "Open Cities ground truth building annotations for precision/recall validation."
+      },
+      {
+        "path": "data/open_cities_raw/ptn/abe1a3/abe1a3.geojson",
+        "format": "GeoJSON (Vector)",
+        "file_size_bytes": 1232044,
+        "purpose": "Open Cities ground truth building annotations for generalization validation."
+      },
+      {
+        "path": "data/road_benchmark/",
+        "format": "Directory (PNG patches & splits)",
+        "purpose": "Experimental dataset used during Phase 13C road DL training and validation."
+      },
+      {
+        "path": "results/prototype/api/8b8c724c7e/",
+        "format": "Directory (Reference run)",
+        "purpose": "Locked reference prototype execution for benchmark comparison and fallback."
+      }
+    ],
+    "generated_at_runtime": [
+      {
+        "pattern": "results/prototype/api/{analysis_id}/input.tif",
+        "purpose": "Uploaded source imagery or subregion slice."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/pipeline_status.json",
+        "purpose": "Real-time weighted stage progress and status state."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/buildings.geojson",
+        "purpose": "Vectorized building footprints in source CRS."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/statistics.csv",
+        "purpose": "Instance-level building footprint morphological metrics."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/overlay.png",
+        "purpose": "Visual QA overlay render of footprints on RGB raster."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/roads.geojson",
+        "purpose": "Classical CV road corridors."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/roads_deep_learning.geojson",
+        "purpose": "Deep learning U-Net ResNet18 road corridors."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/roads_hybrid.geojson",
+        "purpose": "Phase 13D hybrid fused road corridors."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/road_graph_nodes.geojson",
+        "purpose": "Road network topological junction points."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/road_graph_edges.geojson",
+        "purpose": "Road network topological corridor segments."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/candidate_parcels_hybrid_constrained.geojson",
+        "purpose": "Raw road-constrained preliminary parcel candidate polygons."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/parcels_hybrid.geojson",
+        "purpose": "Standardized preliminary parcel candidates."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/parcels_audited.geojson",
+        "purpose": "Parcel candidates enriched with 4-component confidence and uncertainty flags."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/parcel_reviews.json",
+        "purpose": "Active human-in-the-loop review queue state store."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/parcel_reviews_audit.json",
+        "purpose": "Immutable chronological log of all reviewer updates and geometry edits."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/reviewed_parcels.geojson",
+        "purpose": "GIS-ready parcel candidates export with review attributes."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/review_summary.json",
+        "purpose": "Review status breakdown counts (Accepted, Needs Review, Edited, Rejected, Unreviewed)."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/analysis_summary.json",
+        "purpose": "Comprehensive analysis summary JSON with KPIs, timings, and disclaimer."
+      },
+      {
+        "pattern": "results/prototype/api/{analysis_id}/metadata.json",
+        "purpose": "Backward-compatible metadata for existing prototype API consumers."
+      }
+    ]
+  }
+}

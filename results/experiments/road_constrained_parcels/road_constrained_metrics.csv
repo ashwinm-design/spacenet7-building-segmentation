@@ -1,0 +1,2 @@
+Configuration,candidate_count,valid_geometries,valid_geometry_pct,pairwise_overlaps,total_overlap_area_m2,total_parcel_area_m2,mean_candidate_area_m2,median_candidate_area_m2,mean_building_coverage,median_building_coverage,mean_compactness,road_adjacent_candidates,road_adjacency_pct,mean_road_distance_m,mean_road_frontage_m,mean_candidate_score,median_candidate_score
+Phase 13B (Road-Constrained),254,254,100.0,0,0.0,28477.99,112.12,99.83,0.4619,0.1814,0.6457,202,79.53,0.88,11.72,0.7847,0.7809

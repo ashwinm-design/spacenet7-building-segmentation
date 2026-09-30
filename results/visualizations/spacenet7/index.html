@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceNet 7 Cadastral Dataset Inspector — SIH 2026</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #141c2e;
+      --accent: #10b981;
+      --accent-hover: #059669;
+      --border: #23304a;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --font-mono: 'Consolas', 'Courier New', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 1.5rem; font-weight: 700; color: #fff; }
+    .subtitle { font-size: 0.875rem; color: var(--text-muted); }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .grid-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; }
+    .stat-value { font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 4px; }
+    .stat-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+    /* Main Inspection Workspace */
+    .workspace {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 1024px) {
+      .workspace { grid-template-columns: 1fr; }
+    }
+    .sidebar {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .section-title { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); }
+    .control-group { display: flex; flex-direction: column; gap: 8px; }
+    label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
+    select, button {
+      background: #1a243b;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    select:hover, button:hover { border-color: var(--accent); }
+    button.btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #0b0f19;
+      font-weight: 700;
+    }
+    button.btn-primary:hover { background: var(--accent-hover); }
+    .btn-row { display: flex; gap: 8px; }
+    .btn-row button { flex: 1; }
+
+    /* Info Table */
+    .info-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .info-table td { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .info-table td:first-child { color: var(--text-muted); font-weight: 500; }
+    .info-table td:last-child { text-align: right; font-family: var(--font-mono); color: #fff; }
+
+    /* Viewer Area */
+    .viewer {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .tab {
+      padding: 8px 16px;
+      border-radius: 6px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .tab.active {
+      background: #1a243b;
+      color: #fff;
+      border-color: var(--border);
+      border-bottom: 2px solid var(--accent);
+    }
+    .view-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 480px;
+      background: #0d121d;
+      border-radius: 8px;
+      padding: 16px;
+      overflow: auto;
+    }
+    .view-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    /* Gallery Grid */
+    .gallery-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+    .gallery-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .gallery-card {
+      background: #0d121d;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-card img {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .gallery-card-body {
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .gallery-card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      color: #fff;
+    }
+    .gallery-card-tag {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .tag-train { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+    .tag-val { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .tag-test { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>SpaceNet 7 Cadastral Dataset Inspector</h1>
+      <div class="subtitle">Area of Interest: L15-0506E-1204N_2027_3374_13 • SIH 2026 Prototype</div>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <span class="badge" id="sanityBadge">✓ Sanity Checks: PASSED</span>
+    </div>
+  </header>
+
+  <!-- High-level Dataset Stats -->
+  <div class="grid-stats">
+    <div class="stat-card">
+      <div class="stat-label">Total Patches</div>
+      <div class="stat-value">384</div>
+      <div class="stat-sub">256x256 image-mask pairs</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Mean Coverage</div>
+      <div class="stat-value">5.29%</div>
+      <div class="stat-sub">Range: 0.0% – 18.28%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Dense Masks (>15%)</div>
+      <div class="stat-value">23</div>
+      <div class="stat-sub">High parcel density</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Empty Masks</div>
+      <div class="stat-value">23</div>
+      <div class="stat-sub">Zero building pixels</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Splits (Train/Val/Test)</div>
+      <div class="stat-value">256 / 64 / 64</div>
+      <div class="stat-sub">Temporal chronological split</div>
+    </div>
+  </div>
+
+  <!-- Main Interactive Workspace -->
+  <div class="workspace">
+    <!-- Left Sidebar: Controls & Sample Info -->
+    <div class="sidebar">
+      <div class="section-title">Sample Controls</div>
+
+      <div class="control-group">
+        <label for="splitSelect">Filter by Split</label>
+        <select id="splitSelect" onchange="onSplitFilterChange()">
+          <option value="all">All Splits (6 loaded)</option>
+          <option value="train">Train</option>
+          <option value="val">Validation</option>
+          <option value="test">Test</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="sampleSelect">Select Sample</label>
+        <select id="sampleSelect" onchange="onSampleSelectChange()"></select>
+      </div>
+
+      <div class="btn-row">
+        <button onclick="prevSample()">← Prev</button>
+        <button onclick="randomSample()">Random 🎲</button>
+        <button onclick="nextSample()">Next →</button>
+      </div>
+
+      <div class="section-title" style="margin-top:10px;">Sample Information</div>
+      <table class="info-table">
+        <tr><td>Sample ID</td><td id="infoName">-</td></tr>
+        <tr><td>Split</td><td id="infoSplit">-</td></tr>
+        <tr><td>Image Size</td><td id="infoDims">256 × 256</td></tr>
+        <tr><td>Building Pixels</td><td id="infoPixels">-</td></tr>
+        <tr><td>Footprint Coverage</td><td id="infoCoverage">-</td></tr>
+        <tr><td>Connected Buildings</td><td id="infoBuildings">-</td></tr>
+      </table>
+
+      <div style="margin-top: auto; font-size: 0.72rem; color: var(--text-muted); line-height: 1.4;">
+        📁 Local Visualizations Saved:<br>
+        <span style="color:#fff; font-family:var(--font-mono);">results/visualizations/spacenet7/</span>
+      </div>
+    </div>
+
+    <!-- Right Viewer: Tabbed Views -->
+    <div class="viewer">
+      <div class="tabs">
+        <button class="tab active" onclick="switchView('comparison')">Side-by-Side Comparison</button>
+        <button class="tab" onclick="switchView('overlay')">Cadastral Overlay ⭐</button>
+        <button class="tab" onclick="switchView('rgb')">Original Aerial Image</button>
+        <button class="tab" onclick="switchView('mask')">Ground Truth Mask</button>
+      </div>
+
+      <div class="view-container">
+        <img id="mainDisplayImg" class="view-image" src="" alt="Sample Visualization">
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-Sample Gallery (Random 6 Samples from Train, Val, Test) -->
+  <div class="gallery-section">
+    <div class="gallery-header">
+      <div>
+        <div class="section-title">Multi-Sample Inspection Gallery</div>
+        <div class="subtitle">Representative random samples selected across Train, Validation, and Test splits</div>
+      </div>
+      <span class="badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
+        6 Verified Samples
+      </span>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+
+  <script>
+    const samples = [{"sample_name": "2018_04_r0512_c0256", "split": "train", "metrics": {"image_shape": [256, 256, 3], "mask_shape": [256, 256], "total_pixels": 65536, "building_pixels": 906, "coverage_pct": 1.38, "num_buildings": 35}, "rel_paths": {"rgb": "2018_04_r0512_c0256_original.png", "mask": "2018_04_r0512_c0256_mask.png", "overlay": "2018_04_r0512_c0256_overlay.png", "comparison": "2018_04_r0512_c0256_comparison.png"}}, {"sample_name": "2018_01_r0768_c0000", "split": "train", "metrics": {"image_shape": [256, 256, 3], "mask_shape": [256, 256], "total_pixels": 65536, "building_pixels": 623, "coverage_pct": 0.95, "num_buildings": 17}, "rel_paths": {"rgb": "2018_01_r0768_c0000_original.png", "mask": "2018_01_r0768_c0000_mask.png", "overlay": "2018_01_r0768_c0000_overlay.png", "comparison": "2018_01_r0768_c0000_comparison.png"}}, {"sample_name": "2019_07_r0000_c0768", "split": "val", "metrics": {"image_shape": [256, 256, 3], "mask_shape": [256, 256], "total_pixels": 65536, "building_pixels": 3112, "coverage_pct": 4.75, "num_buildings": 127}, "rel_paths": {"rgb": "2019_07_r0000_c0768_original.png", "mask": "2019_07_r0000_c0768_mask.png", "overlay": "2019_07_r0000_c0768_overlay.png", "comparison": "2019_07_r0000_c0768_comparison.png"}}, {"sample_name": "2019_06_r0768_c0768", "split": "val", "metrics": {"image_shape": [256, 256, 3], "mask_shape": [256, 256], "total_pixels": 65536, "building_pixels": 1681, "coverage_pct": 2.57, "num_buildings": 60}, "rel_paths": {"rgb": "2019_06_r0768_c0768_original.png", "mask": "2019_06_r0768_c0768_mask.png", "overlay": "2019_06_r0768_c0768_overlay.png", "comparison": "2019_06_r0768_c0768_comparison.png"}}, {"sample_name": "2019_10_r0768_c0000", "split": "test", "metrics": {"image_shape": [256, 256, 3], "mask_shape": [256, 256], "total_pixels": 65536, "building_pixels": 3011, "coverage_pct": 4.59, "num_buildings": 77}, "rel_paths": {"rgb": "2019_10_r0768_c0000_original.png", "mask": "2019_10_r0768_c0000_mask.png", "overlay": "2019_10_r0768_c0000_overlay.png", "comparison": "2019_10_r0768_c0000_comparison.png"}}, {"sample_name": "2019_10_r0000_c0256", "split": "test", "metrics": {"image_shape": [256, 256, 3], "mask_shape": [256, 256], "total_pixels": 65536, "building_pixels": 9124, "coverage_pct": 13.92, "num_buildings": 299}, "rel_paths": {"rgb": "2019_10_r0000_c0256_original.png", "mask": "2019_10_r0000_c0256_mask.png", "overlay": "2019_10_r0000_c0256_overlay.png", "comparison": "2019_10_r0000_c0256_comparison.png"}}];
+    let currentIndex = 0;
+    let currentView = 'comparison'; // 'comparison', 'overlay', 'rgb', 'mask'
+
+    function init() {
+      const select = document.getElementById('sampleSelect');
+      select.innerHTML = '';
+      samples.forEach((s, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `[${s.split.toUpperCase()}] ${s.sample_name} (${s.metrics.coverage_pct}%)`;
+        select.appendChild(opt);
+      });
+
+      renderGallery();
+      updateView();
+    }
+
+    function onSplitFilterChange() {
+      const split = document.getElementById('splitSelect').value;
+      const select = document.getElementById('sampleSelect');
+      select.innerHTML = '';
+      samples.forEach((s, idx) => {
+        if (split === 'all' || s.split === split) {
+          const opt = document.createElement('option');
+          opt.value = idx;
+          opt.textContent = `[${s.split.toUpperCase()}] ${s.sample_name} (${s.metrics.coverage_pct}%)`;
+          select.appendChild(opt);
+        }
+      });
+      if (select.options.length > 0) {
+        currentIndex = parseInt(select.options[0].value);
+        updateView();
+      }
+    }
+
+    function onSampleSelectChange() {
+      currentIndex = parseInt(document.getElementById('sampleSelect').value);
+      updateView();
+    }
+
+    function nextSample() {
+      const select = document.getElementById('sampleSelect');
+      let nextOpt = select.selectedIndex + 1;
+      if (nextOpt >= select.options.length) nextOpt = 0;
+      select.selectedIndex = nextOpt;
+      currentIndex = parseInt(select.options[nextOpt].value);
+      updateView();
+    }
+
+    function prevSample() {
+      const select = document.getElementById('sampleSelect');
+      let prevOpt = select.selectedIndex - 1;
+      if (prevOpt < 0) prevOpt = select.options.length - 1;
+      select.selectedIndex = prevOpt;
+      currentIndex = parseInt(select.options[prevOpt].value);
+      updateView();
+    }
+
+    function randomSample() {
+      const select = document.getElementById('sampleSelect');
+      const randOpt = Math.floor(Math.random() * select.options.length);
+      select.selectedIndex = randOpt;
+      currentIndex = parseInt(select.options[randOpt].value);
+      updateView();
+    }
+
+    function switchView(viewName) {
+      currentView = viewName;
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+      updateView();
+    }
+
+    function updateView() {
+      const s = samples[currentIndex];
+      if (!s) return;
+
+      document.getElementById('infoName').textContent = s.sample_name;
+      document.getElementById('infoSplit').textContent = s.split.toUpperCase();
+      document.getElementById('infoDims').textContent = `${s.metrics.image_shape[0]} × ${s.metrics.image_shape[1]}`;
+      document.getElementById('infoPixels').textContent = s.metrics.building_pixels.toLocaleString() + ' px';
+      document.getElementById('infoCoverage').textContent = `${s.metrics.coverage_pct}%`;
+      document.getElementById('infoBuildings').textContent = s.metrics.num_buildings;
+
+      const imgElem = document.getElementById('mainDisplayImg');
+      if (currentView === 'comparison') {
+        imgElem.src = s.rel_paths.comparison;
+      } else if (currentView === 'overlay') {
+        imgElem.src = s.rel_paths.overlay;
+      } else if (currentView === 'rgb') {
+        imgElem.src = s.rel_paths.rgb;
+      } else if (currentView === 'mask') {
+        imgElem.src = s.rel_paths.mask;
+      }
+    }
+
+    function renderGallery() {
+      const grid = document.getElementById('galleryGrid');
+      grid.innerHTML = '';
+      samples.forEach((s, idx) => {
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+        card.innerHTML = `
+          <img src="${s.rel_paths.comparison}" alt="${s.sample_name}">
+          <div class="gallery-card-body">
+            <div>
+              <div class="gallery-card-title">${s.sample_name}</div>
+              <div style="font-size:0.75rem; color:#94a3b8; margin-top:2px;">
+                ${s.metrics.coverage_pct}% coverage • ${s.metrics.num_buildings} buildings
+              </div>
+            </div>
+            <span class="gallery-card-tag tag-${s.split}">${s.split}</span>
+          </div>
+        `;
+        card.onclick = () => {
+          currentIndex = idx;
+          const select = document.getElementById('sampleSelect');
+          select.value = idx;
+          updateView();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        grid.appendChild(card);
+      });
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

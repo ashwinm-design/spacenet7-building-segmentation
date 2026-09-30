@@ -1,0 +1,91 @@
+{
+  "experiment": "Phase 10: Touching-Building Instance Separation Validation",
+  "frozen_checkpoint": "results/experiments/3class_model/best_model.pth",
+  "checkpoint_sha256": "3aa0736c7430c3b31755cc5afc0576b196cc7b6292eae0c57cd907fc9b97dbed",
+  "gt_sha256": {
+    "f49f31": "bedaeae10730a3c60e851b83d6fd43a89a97e6105397dd5219701626531a1408",
+    "abe1a3": "0915b1711e0fa5598d330c21bc1d1390f219a78244022c08d489f215e8a1fe31"
+  },
+  "ground_truth_stats": {
+    "total_buildings": 8731,
+    "isolated_buildings": 3812,
+    "touching_buildings": 4919,
+    "touching_pairs": 5793,
+    "touching_groups": 1185
+  },
+  "touching_patches_evaluated": 529,
+  "primary_touching_metrics": {
+    "3class_growth_1px": {
+      "total_pairs": 5322,
+      "separation_rate": 0.0365,
+      "merge_rate": 0.0032,
+      "miss_rate": 0.9604,
+      "oversegmentation_rate": 0.0046,
+      "separated_pairs": 194,
+      "merged_pairs": 17,
+      "missed_pairs": 5111
+    },
+    "3class_interior_only": {
+      "total_pairs": 5322,
+      "separation_rate": 0.0195,
+      "merge_rate": 0.0028,
+      "miss_rate": 0.9776,
+      "oversegmentation_rate": 0.001,
+      "separated_pairs": 104,
+      "merged_pairs": 15,
+      "missed_pairs": 5203
+    },
+    "binary_baseline": {
+      "total_pairs": 5322,
+      "separation_rate": 0.0415,
+      "merge_rate": 0.0098,
+      "miss_rate": 0.9487,
+      "oversegmentation_rate": 0.0032,
+      "separated_pairs": 221,
+      "merged_pairs": 52,
+      "missed_pairs": 5049
+    }
+  },
+  "group_metrics_table": [
+    {
+      "group_size_bucket": "Size 2",
+      "num_groups": 831,
+      "avg_predicted_instances": 0.59,
+      "fully_separated_pct": 8.3,
+      "partially_separated_pct": 49.22,
+      "fully_merged_pct": 42.48
+    },
+    {
+      "group_size_bucket": "Size 3",
+      "num_groups": 335,
+      "avg_predicted_instances": 0.7,
+      "fully_separated_pct": 1.49,
+      "partially_separated_pct": 61.79,
+      "fully_merged_pct": 36.72
+    },
+    {
+      "group_size_bucket": "Size 4",
+      "num_groups": 169,
+      "avg_predicted_instances": 1.02,
+      "fully_separated_pct": 1.18,
+      "partially_separated_pct": 53.25,
+      "fully_merged_pct": 45.56
+    },
+    {
+      "group_size_bucket": "Size 5-9",
+      "num_groups": 274,
+      "avg_predicted_instances": 1.1,
+      "fully_separated_pct": 0.0,
+      "partially_separated_pct": 64.6,
+      "fully_merged_pct": 35.4
+    },
+    {
+      "group_size_bucket": "Size 10+",
+      "num_groups": 91,
+      "avg_predicted_instances": 2.02,
+      "fully_separated_pct": 0.0,
+      "partially_separated_pct": 78.02,
+      "fully_merged_pct": 21.98
+    }
+  ]
+}

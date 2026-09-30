@@ -1,0 +1,17 @@
+{
+  "model_architecture": "U-Net (ResNet18 Pretrained Backbone)",
+  "parameter_count": 14328209,
+  "num_epochs": 75,
+  "final_loss": 0.05402,
+  "final_dice": 0.9365,
+  "best_dice": 0.9365,
+  "final_iou": 0.8805,
+  "final_precision": 0.9305,
+  "final_recall": 0.9425,
+  "overfit_test_succeeded": true,
+  "total_training_time_s": 28418.35,
+  "saved_predictions_dir": "results/experiments/overfit_16\\predictions",
+  "best_model_path": "results/experiments/overfit_16\\best_model.pth",
+  "training_curve_path": "results/experiments/overfit_16\\training_curve.png",
+  "metrics_csv_path": "results/experiments/overfit_16\\metrics.csv"
+}

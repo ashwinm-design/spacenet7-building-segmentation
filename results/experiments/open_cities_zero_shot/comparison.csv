@@ -1,0 +1,17 @@
+Metric,SpaceNet 7 (Locked),Open Cities Native (20cm),Open Cities Ablation (~1.0m)
+Building Dice,0.657,0.2264,0.4721
+Building IoU,0.4895,0.1333,0.3135
+Building Precision,—,0.6658,0.7934
+Building Recall,—,0.1448,0.3436
+Boundary Dice,—,0.0863,0.2705
+Boundary IoU,—,0.0458,0.1576
+Matched Polygon IoU,0.6734,0.6769,0.6539
+Strict Object F1 (IoU>=0.50),0.4093,0.0577,0.166
+Strict Object Precision,—,0.0376,0.1665
+Strict Object Recall,—,0.123,0.1654
+Relaxed Object F1 (IoU>=0.25),0.6415,0.1222,0.3433
+Relaxed Object Precision,—,0.0798,0.3444
+Relaxed Object Recall,—,0.2606,0.3421
+Area IoU,—,0.1436,0.2785
+Area Precision,—,0.6906,0.8769
+Area Recall,—,0.1546,0.2909

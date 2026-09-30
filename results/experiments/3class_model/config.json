@@ -1,0 +1,25 @@
+{
+  "architecture": "unet",
+  "encoder": "resnet18",
+  "pretrained": true,
+  "classes": 3,
+  "class_names": [
+    "background",
+    "interior",
+    "boundary"
+  ],
+  "class_weights": [
+    1.0,
+    4.0,
+    3.0
+  ],
+  "gamma": 2.0,
+  "epochs": 60,
+  "batch_size": 8,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "device": "cpu",
+  "best_epoch": 56,
+  "best_val_score": 0.5855601901729999,
+  "elapsed_seconds": 4495.06
+}

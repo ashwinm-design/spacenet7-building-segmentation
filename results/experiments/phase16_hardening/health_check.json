@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-09-30T05:34:37Z",
+  "overall_status": "READY",
+  "subsystems": {
+    "Python": {
+      "status": "PASS",
+      "detail": "Python 3.14.6"
+    },
+    "PyTorch": {
+      "status": "PASS",
+      "detail": "v2.14.0+cpu (CUDA: False)"
+    },
+    "Model checkpoint": {
+      "status": "PASS",
+      "detail": "164.2 MB (SpaceNet 7 ResNet34)"
+    },
+    "Road DL checkpoint": {
+      "status": "PASS",
+      "detail": "54.8 MB (ResNet18 U-Net)"
+    },
+    "Demo imagery": {
+      "status": "PASS",
+      "detail": "11.1 MB (f49f31.tif)"
+    },
+    "GeoPandas": {
+      "status": "PASS",
+      "detail": "v1.2.0"
+    },
+    "Rasterio": {
+      "status": "PASS",
+      "detail": "v1.5.1"
+    },
+    "Shapely": {
+      "status": "PASS",
+      "detail": "v2.1.2"
+    },
+    "Backend": {
+      "status": "PASS",
+      "detail": "Live on http://127.0.0.1:8000"
+    },
+    "Frontend build": {
+      "status": "PASS",
+      "detail": "Built (1253 bytes HTML, 1205.7 KB JS)"
+    }
+  }
+}

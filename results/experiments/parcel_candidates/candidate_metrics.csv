@@ -1,0 +1,3 @@
+method,candidate_count,mean_parcel_area_m2,median_parcel_area_m2,mean_coverage_ratio,mean_compactness,validity_percentage,pairwise_overlaps,overlap_area_m2,mean_candidate_score,execution_time_sec
+Bounded Voronoi,254,162.22,154.82,0.3971,0.7243,100.0,0,0.0,0.7908,23.52
+Concave-Hull Bounded,254,171.21,158.6,0.3944,0.7271,100.0,1,1.62,0.7908,20.912

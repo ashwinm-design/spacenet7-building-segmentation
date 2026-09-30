@@ -1,0 +1,192 @@
+{
+  "sanity_check": {
+    "status": "PASSED",
+    "samples_checked": 384,
+    "total_dataset_samples": 384,
+    "load_success": "384/384",
+    "dimension_matching": "384/384",
+    "binary_valid": "384/384",
+    "no_nan_inf": "384/384",
+    "errors": []
+  },
+  "statistics": {
+    "total_samples": 384,
+    "mean_coverage_pct": 5.29,
+    "min_coverage_pct": 0.0,
+    "max_coverage_pct": 18.28,
+    "empty_masks_count": 23,
+    "dense_masks_count": 23,
+    "split_breakdown": {
+      "train": {
+        "count": 256,
+        "mean_coverage_pct": 5.19,
+        "min_coverage_pct": 0.0,
+        "max_coverage_pct": 18.23
+      },
+      "val": {
+        "count": 64,
+        "mean_coverage_pct": 5.46,
+        "min_coverage_pct": 0.0,
+        "max_coverage_pct": 18.28
+      },
+      "test": {
+        "count": 64,
+        "mean_coverage_pct": 5.49,
+        "min_coverage_pct": 0.0,
+        "max_coverage_pct": 18.28
+      }
+    }
+  },
+  "inspected_samples": [
+    {
+      "sample_name": "2018_04_r0512_c0256",
+      "split": "train",
+      "metrics": {
+        "image_shape": [
+          256,
+          256,
+          3
+        ],
+        "mask_shape": [
+          256,
+          256
+        ],
+        "total_pixels": 65536,
+        "building_pixels": 906,
+        "coverage_pct": 1.38,
+        "num_buildings": 35
+      },
+      "rel_paths": {
+        "rgb": "2018_04_r0512_c0256_original.png",
+        "mask": "2018_04_r0512_c0256_mask.png",
+        "overlay": "2018_04_r0512_c0256_overlay.png",
+        "comparison": "2018_04_r0512_c0256_comparison.png"
+      }
+    },
+    {
+      "sample_name": "2018_01_r0768_c0000",
+      "split": "train",
+      "metrics": {
+        "image_shape": [
+          256,
+          256,
+          3
+        ],
+        "mask_shape": [
+          256,
+          256
+        ],
+        "total_pixels": 65536,
+        "building_pixels": 623,
+        "coverage_pct": 0.95,
+        "num_buildings": 17
+      },
+      "rel_paths": {
+        "rgb": "2018_01_r0768_c0000_original.png",
+        "mask": "2018_01_r0768_c0000_mask.png",
+        "overlay": "2018_01_r0768_c0000_overlay.png",
+        "comparison": "2018_01_r0768_c0000_comparison.png"
+      }
+    },
+    {
+      "sample_name": "2019_07_r0000_c0768",
+      "split": "val",
+      "metrics": {
+        "image_shape": [
+          256,
+          256,
+          3
+        ],
+        "mask_shape": [
+          256,
+          256
+        ],
+        "total_pixels": 65536,
+        "building_pixels": 3112,
+        "coverage_pct": 4.75,
+        "num_buildings": 127
+      },
+      "rel_paths": {
+        "rgb": "2019_07_r0000_c0768_original.png",
+        "mask": "2019_07_r0000_c0768_mask.png",
+        "overlay": "2019_07_r0000_c0768_overlay.png",
+        "comparison": "2019_07_r0000_c0768_comparison.png"
+      }
+    },
+    {
+      "sample_name": "2019_06_r0768_c0768",
+      "split": "val",
+      "metrics": {
+        "image_shape": [
+          256,
+          256,
+          3
+        ],
+        "mask_shape": [
+          256,
+          256
+        ],
+        "total_pixels": 65536,
+        "building_pixels": 1681,
+        "coverage_pct": 2.57,
+        "num_buildings": 60
+      },
+      "rel_paths": {
+        "rgb": "2019_06_r0768_c0768_original.png",
+        "mask": "2019_06_r0768_c0768_mask.png",
+        "overlay": "2019_06_r0768_c0768_overlay.png",
+        "comparison": "2019_06_r0768_c0768_comparison.png"
+      }
+    },
+    {
+      "sample_name": "2019_10_r0768_c0000",
+      "split": "test",
+      "metrics": {
+        "image_shape": [
+          256,
+          256,
+          3
+        ],
+        "mask_shape": [
+          256,
+          256
+        ],
+        "total_pixels": 65536,
+        "building_pixels": 3011,
+        "coverage_pct": 4.59,
+        "num_buildings": 77
+      },
+      "rel_paths": {
+        "rgb": "2019_10_r0768_c0000_original.png",
+        "mask": "2019_10_r0768_c0000_mask.png",
+        "overlay": "2019_10_r0768_c0000_overlay.png",
+        "comparison": "2019_10_r0768_c0000_comparison.png"
+      }
+    },
+    {
+      "sample_name": "2019_10_r0000_c0256",
+      "split": "test",
+      "metrics": {
+        "image_shape": [
+          256,
+          256,
+          3
+        ],
+        "mask_shape": [
+          256,
+          256
+        ],
+        "total_pixels": 65536,
+        "building_pixels": 9124,
+        "coverage_pct": 13.92,
+        "num_buildings": 299
+      },
+      "rel_paths": {
+        "rgb": "2019_10_r0000_c0256_original.png",
+        "mask": "2019_10_r0000_c0256_mask.png",
+        "overlay": "2019_10_r0000_c0256_overlay.png",
+        "comparison": "2019_10_r0000_c0256_comparison.png"
+      }
+    }
+  ]
+}

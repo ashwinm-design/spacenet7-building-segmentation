@@ -1,0 +1,21 @@
+{
+  "sample_name": "2019_07_r0000_c0768",
+  "split": "val",
+  "image_path": "data/processed_spacenet7\\patches\\images\\val\\2019_07_r0000_c0768.png",
+  "mask_path": "data/processed_spacenet7\\patches\\masks\\val\\2019_07_r0000_c0768_mask.png",
+  "metrics": {
+    "image_shape": [
+      256,
+      256,
+      3
+    ],
+    "mask_shape": [
+      256,
+      256
+    ],
+    "total_pixels": 65536,
+    "building_pixels": 3112,
+    "coverage_pct": 4.75,
+    "num_buildings": 127
+  }
+}

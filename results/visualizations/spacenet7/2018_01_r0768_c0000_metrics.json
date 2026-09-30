@@ -1,0 +1,21 @@
+{
+  "sample_name": "2018_01_r0768_c0000",
+  "split": "train",
+  "image_path": "data/processed_spacenet7\\patches\\images\\train\\2018_01_r0768_c0000.png",
+  "mask_path": "data/processed_spacenet7\\patches\\masks\\train\\2018_01_r0768_c0000_mask.png",
+  "metrics": {
+    "image_shape": [
+      256,
+      256,
+      3
+    ],
+    "mask_shape": [
+      256,
+      256
+    ],
+    "total_pixels": 65536,
+    "building_pixels": 623,
+    "coverage_pct": 0.95,
+    "num_buildings": 17
+  }
+}

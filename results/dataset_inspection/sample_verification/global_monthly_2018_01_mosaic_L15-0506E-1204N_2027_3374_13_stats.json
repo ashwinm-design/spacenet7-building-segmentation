@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "image_file": "global_monthly_2018_01_mosaic_L15-0506E-1204N_2027_3374_13.tif",
+  "geojson_file": "global_monthly_2018_01_mosaic_L15-0506E-1204N_2027_3374_13_Buildings.geojson",
+  "image_dimensions": [
+    1024,
+    1024,
+    4
+  ],
+  "rgb_saved": "results/dataset_inspection/sample_verification\\global_monthly_2018_01_mosaic_L15-0506E-1204N_2027_3374_13_rgb.png",
+  "mask_saved": "results/dataset_inspection/sample_verification\\global_monthly_2018_01_mosaic_L15-0506E-1204N_2027_3374_13_mask.png",
+  "overlay_saved": "results/dataset_inspection/sample_verification\\global_monthly_2018_01_mosaic_L15-0506E-1204N_2027_3374_13_overlay.png",
+  "features_in_geojson": 2273,
+  "polygons_rasterized": 2273,
+  "building_pixels": 53422,
+  "total_pixels": 1048576,
+  "building_coverage_pct": 5.095,
+  "alpha_band_stats": {
+    "band_4_present": true,
+    "band_4_min": 255,
+    "band_4_max": 255,
+    "band_4_mean": 255.0,
+    "valid_pixels_pct": 100.0
+  },
+  "elapsed_seconds": 0.573
+}

@@ -1,0 +1,20 @@
+{
+  "analysis_id": "8b8c724c7e",
+  "status": "completed",
+  "building_count": 254,
+  "total_area": 16826.48,
+  "area_unit": "m^2",
+  "average_building_area": 66.25,
+  "average_confidence": 0.7859,
+  "processing_time": 6.38,
+  "inference_time": 1.4,
+  "polygonization_time": 0.86,
+  "tile_count": 16,
+  "crs": "EPSG:32732",
+  "georeferenced": true,
+  "image_width": 1024,
+  "image_height": 1024,
+  "geojson_url": "/api/results/8b8c724c7e/geojson",
+  "statistics_url": "/api/results/8b8c724c7e/statistics",
+  "overlay_url": "/api/results/8b8c724c7e/overlay"
+}

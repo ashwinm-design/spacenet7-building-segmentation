@@ -1,0 +1,127 @@
+{
+  "dataset_name": "Open Cities AI Challenge",
+  "source": "https://source.coop/open-cities/ai-challenge",
+  "license": "ODbL-1.0",
+  "target_region": "ptn (Pointe-Noire, Republic of Congo)",
+  "tier": "train_tier_1",
+  "scenes": {
+    "f49f31": {
+      "scene_id": "f49f31",
+      "city": "ptn",
+      "raster": {
+        "file_path": "data/open_cities_raw/ptn/f49f31/f49f31.tif",
+        "width": 6605,
+        "height": 4185,
+        "num_channels": 4,
+        "dtype": "uint8",
+        "crs": "EPSG:32732",
+        "gsd_x_m": 0.2,
+        "gsd_y_m": 0.2,
+        "pixel_area_m2": 0.04,
+        "file_size_mb": 11.07,
+        "bounds": {
+          "left": 820147.747,
+          "bottom": 9468182.807,
+          "right": 821468.747,
+          "top": 9469019.807
+        }
+      },
+      "labels": {
+        "file_path": "data/open_cities_raw/ptn/f49f31-labels/f49f31.geojson",
+        "source_crs": "EPSG:4326",
+        "projected_crs": "EPSG:32732",
+        "file_size_mb": 1.38,
+        "num_buildings": 2596,
+        "num_invalid_geometries": 0,
+        "num_outside_bounds": 0,
+        "num_overlapping_pairs": 75,
+        "num_touching_pairs": 10,
+        "overlap_area_m2_max": 107.1439,
+        "overlap_area_m2_median": 2.5421,
+        "area_stats_m2": {
+          "min": 1.84,
+          "p25": 24.59,
+          "median": 62.95,
+          "p75": 105.8,
+          "p90": 140.43,
+          "p95": 171.45,
+          "p99": 338.65,
+          "max": 1018.47,
+          "mean": 75.01,
+          "std": 77.38
+        },
+        "area_stats_pixels": {
+          "min": 45.9,
+          "p25": 614.9,
+          "median": 1573.7,
+          "p75": 2645.0,
+          "p90": 3510.6,
+          "p95": 4286.2,
+          "p99": 8466.1,
+          "max": 25461.7,
+          "mean": 1875.2,
+          "std": 1934.4
+        }
+      }
+    },
+    "abe1a3": {
+      "scene_id": "abe1a3",
+      "city": "ptn",
+      "raster": {
+        "file_path": "data/open_cities_raw/ptn/abe1a3/abe1a3.tif",
+        "width": 7840,
+        "height": 7787,
+        "num_channels": 4,
+        "dtype": "uint8",
+        "crs": "EPSG:32732",
+        "gsd_x_m": 0.2,
+        "gsd_y_m": 0.2,
+        "pixel_area_m2": 0.04,
+        "file_size_mb": 28.65,
+        "bounds": {
+          "left": 819492.606,
+          "bottom": 9470916.543,
+          "right": 821060.606,
+          "top": 9472473.943
+        }
+      },
+      "labels": {
+        "file_path": "data/open_cities_raw/ptn/abe1a3-labels/abe1a3.geojson",
+        "source_crs": "EPSG:4326",
+        "projected_crs": "EPSG:32732",
+        "file_size_mb": 3.67,
+        "num_buildings": 6135,
+        "num_invalid_geometries": 0,
+        "num_outside_bounds": 0,
+        "num_overlapping_pairs": 1608,
+        "num_touching_pairs": 19,
+        "overlap_area_m2_max": 385.3152,
+        "overlap_area_m2_median": 27.5691,
+        "area_stats_m2": {
+          "min": 1.05,
+          "p25": 23.23,
+          "median": 54.22,
+          "p75": 102.94,
+          "p90": 156.81,
+          "p95": 185.11,
+          "p99": 292.05,
+          "max": 981.16,
+          "mean": 71.77,
+          "std": 65.57
+        },
+        "area_stats_pixels": {
+          "min": 26.2,
+          "p25": 580.8,
+          "median": 1355.6,
+          "p75": 2573.6,
+          "p90": 3920.4,
+          "p95": 4627.8,
+          "p99": 7301.3,
+          "max": 24529.1,
+          "mean": 1794.2,
+          "std": 1639.3
+        }
+      }
+    }
+  }
+}

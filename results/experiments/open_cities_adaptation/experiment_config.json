@@ -1,0 +1,61 @@
+{
+  "experiment": "Phase 11: Controlled Open Cities Domain Adaptation",
+  "random_seed": 42,
+  "pytorch_version": "2.14.0+cpu",
+  "cuda_available": false,
+  "device": "cpu",
+  "model_architecture": "U-Net with ResNet-18 Encoder (3 Output Classes)",
+  "parameter_count": 14328209,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "batch_size": 8,
+  "maximum_epochs": 40,
+  "early_stopping_patience": 7,
+  "loss": "Multiclass Focal (gamma=2.0, weight=0.5) + Multiclass Dice (weight=0.5)",
+  "class_weights": [
+    1.0,
+    4.0,
+    3.0
+  ],
+  "augmentation_parameters": {
+    "horizontal_flip": true,
+    "vertical_flip": true,
+    "rotate_90": true,
+    "random_crop_scale": [
+      0.85,
+      1.0
+    ],
+    "brightness_range": [
+      0.85,
+      1.15
+    ],
+    "contrast_range": [
+      0.85,
+      1.15
+    ],
+    "gaussian_noise_prob": 0.2,
+    "gaussian_noise_std": 0.02
+  },
+  "spatial_splits": {
+    "train": 383,
+    "validation": 130,
+    "test": 136
+  },
+  "primary_experiment": {
+    "best_epoch": 2,
+    "best_val_dice": 0.7869194582987851,
+    "total_epochs": 9,
+    "training_time_s": 467.27051997184753,
+    "best_checkpoint": "results/experiments/open_cities_adaptation\\checkpoints\\training_best_model.pth",
+    "history_csv": "results/experiments/open_cities_adaptation\\training_history.csv"
+  },
+  "imagenet_ablation": {
+    "best_epoch": 10,
+    "best_val_dice": 0.8921636286464315,
+    "total_epochs": 17,
+    "training_time_s": 939.2528464794159,
+    "best_checkpoint": "results/experiments/open_cities_adaptation\\checkpoints\\imagenet_ablation_best_model.pth",
+    "history_csv": "results/experiments/open_cities_adaptation\\imagenet_ablation_history.csv"
+  }
+}

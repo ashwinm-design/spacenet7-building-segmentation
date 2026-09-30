@@ -1,0 +1,116 @@
+{
+  "experiment": "Phase 11: Spatially Separated Dataset Split",
+  "total_valid_patches": 649,
+  "spatial_block_definitions": {
+    "f49f31": {
+      "train": {
+        "left_min": 256,
+        "left_max": 3072,
+        "rule": "left < 3328",
+        "block_name": "Western Sector"
+      },
+      "val": {
+        "left_min": 3328,
+        "left_max": 4096,
+        "rule": "3328 <= left < 4352",
+        "block_name": "Central Buffer Sector"
+      },
+      "test": {
+        "left_min": 4352,
+        "left_max": 6144,
+        "rule": "left >= 4352",
+        "block_name": "Eastern Sector"
+      }
+    },
+    "abe1a3": {
+      "train": {
+        "left_min": 256,
+        "left_max": 4096,
+        "rule": "left < 4352",
+        "block_name": "Western Sector"
+      },
+      "val": {
+        "left_min": 4352,
+        "left_max": 5120,
+        "rule": "4352 <= left < 5376",
+        "block_name": "Central Buffer Sector"
+      },
+      "test": {
+        "left_min": 5376,
+        "left_max": 7424,
+        "rule": "left >= 5376",
+        "block_name": "Eastern Sector"
+      }
+    }
+  },
+  "split_summary": {
+    "train_patches": 383,
+    "val_patches": 130,
+    "test_patches": 136
+  },
+  "audit_by_split": {
+    "train": {
+      "patch_count": 383,
+      "patch_percentage": 59.01,
+      "empty_patches": 22,
+      "empty_percentage": 5.74,
+      "sparse_patches_1_to_5": 21,
+      "sparse_percentage": 5.48,
+      "dense_patches_15_plus": 278,
+      "dense_percentage": 72.58,
+      "touching_patches": 321,
+      "touching_percentage": 83.81,
+      "average_buildings_per_patch": 18.2,
+      "min_buildings_per_patch": 0,
+      "max_buildings_per_patch": 44,
+      "average_building_coverage_pct": 34.63,
+      "class_distribution_pct": {
+        "background_class_0": 65.37,
+        "interior_class_1": 30.44,
+        "boundary_class_2": 4.2
+      }
+    },
+    "val": {
+      "patch_count": 130,
+      "patch_percentage": 20.03,
+      "empty_patches": 7,
+      "empty_percentage": 5.38,
+      "sparse_patches_1_to_5": 6,
+      "sparse_percentage": 4.62,
+      "dense_patches_15_plus": 98,
+      "dense_percentage": 75.38,
+      "touching_patches": 115,
+      "touching_percentage": 88.46,
+      "average_buildings_per_patch": 18.84,
+      "min_buildings_per_patch": 0,
+      "max_buildings_per_patch": 37,
+      "average_building_coverage_pct": 34.87,
+      "class_distribution_pct": {
+        "background_class_0": 65.13,
+        "interior_class_1": 30.4,
+        "boundary_class_2": 4.47
+      }
+    },
+    "test": {
+      "patch_count": 136,
+      "patch_percentage": 20.96,
+      "empty_patches": 8,
+      "empty_percentage": 5.88,
+      "sparse_patches_1_to_5": 16,
+      "sparse_percentage": 11.76,
+      "dense_patches_15_plus": 71,
+      "dense_percentage": 52.21,
+      "touching_patches": 93,
+      "touching_percentage": 68.38,
+      "average_buildings_per_patch": 14.62,
+      "min_buildings_per_patch": 0,
+      "max_buildings_per_patch": 40,
+      "average_building_coverage_pct": 29.76,
+      "class_distribution_pct": {
+        "background_class_0": 70.24,
+        "interior_class_1": 26.18,
+        "boundary_class_2": 3.57
+      }
+    }
+  }
+}

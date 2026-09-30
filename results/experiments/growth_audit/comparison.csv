@@ -1,0 +1,19 @@
+Metric,SpaceNet FT (1.0px),SpaceNet FT (1.5px),ImageNet Abl (1.0px),ImageNet Abl (1.5px),Phase 11 Reported (FT),Phase 11 Reported (ImageNet)
+Predicted Polygon Count,4717,4804,2011,2039,4804,2039
+Area IoU,0.5554,0.5553,0.703,0.7145,0.5556,0.7146
+Area Precision,0.6753,0.6738,0.8067,0.8016,0.6744,0.802
+Area Recall,0.7168,0.7179,0.79,0.8092,0.7178,0.8089
+Mean Matched Polygon IoU,0.7429,0.7417,0.7938,0.8076,0.7473,0.8132
+Strict Object Precision,0.159,0.1559,0.5296,0.5238,0.147,0.4747
+Strict Object Recall,0.3886,0.3881,0.5518,0.5534,0.5083,0.6969
+Strict Object F1,0.2257,0.2225,0.5405,0.5382,0.228,0.5648
+Relaxed Object Precision,0.2162,0.2125,0.6126,0.6047,0.1934,0.5385
+Relaxed Object Recall,0.5285,0.529,0.6383,0.6389,0.6688,0.7905
+Relaxed Object F1,0.3069,0.3032,0.6252,0.6213,0.3,0.6406
+Geometry Validity (%),100.0,100.0,100.0,100.0,100.0,100.0
+Total Touching Pairs,856,856,856,856,856,856
+Separated Touching Pairs,213,212,301,307,212,307
+Merged Touching Pairs,511,512,435,437,512,437
+Missed Touching Pairs,132,132,120,112,132,112
+Detected Pair Sep Rate (%),29.42,29.28,40.9,41.26,29.28,41.26
+Detected Pair Merge Rate (%),70.58,70.72,59.1,58.74,70.72,58.74

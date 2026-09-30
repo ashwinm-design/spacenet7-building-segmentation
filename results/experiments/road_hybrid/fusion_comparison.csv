@@ -1,0 +1,14 @@
+Method,Area (m²),ROI Coverage (%),Length (m),Components,Largest Ratio,Fragmented (%),Connectivity Score,Median Width (m),Building Overlap (m²),Overlap Count,Validity (%)
+Phase 13B (Classical CV),16366.52,39.02,1214.92,6,0.9374,16.67,0.7812,3.5,0.0,0,100.0
+Phase 13C (Deep Learning),3292.56,7.85,965.21,42,0.1072,19.05,0.0868,4.5,251.81,66,100.0
+Hybrid: Hybrid Weighted 75 25,15457.46,36.85,1322.77,11,0.9355,63.64,0.3402,3.96,0.0,0,100.0
+Hybrid: Hybrid Balanced 50 50,6527.11,15.56,1213.73,56,0.2899,25.0,0.2174,2.83,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery,17081.82,40.73,1612.23,3,0.9977,66.67,0.3326,3.77,0.0,0,100.0
+Hybrid: Hybrid Union Filtered,16998.76,40.53,1545.93,3,0.9977,66.67,0.3326,4.25,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery Buf 0Cm,17148.17,40.88,1627.73,3,0.9975,66.67,0.3325,3.95,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery Buf 50Cm,16927.06,40.36,1579.28,2,0.9987,50.0,0.4994,3.96,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery Buf 100Cm,16557.5,39.48,1548.22,5,0.9435,20.0,0.7548,3.87,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery Gap 5Dm,17089.59,40.74,1571.73,3,0.9977,66.67,0.3326,4.18,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery Gap 10Dm,17115.59,40.81,1580.47,4,0.9968,75.0,0.2492,4.09,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery Gap 20Dm,17156.41,40.9,1606.33,3,0.998,66.67,0.3327,3.87,0.0,0,100.0
+Hybrid: Hybrid Dl Recovery Gap 30Dm,17242.78,41.11,1611.5,2,0.9991,50.0,0.4995,3.73,0.0,0,100.0

@@ -1,0 +1,38 @@
+dataset:
+  name: "Satellite Building Segmentation Benchmark Subset"
+  raw_dir: "data/raw/satellite_buildings"
+  processed_dir: "data/processed"
+  image_size: [256, 256]
+  in_channels: 3
+  num_classes: 1
+
+split:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_seed: 42
+  geographic_split: true
+  train_regions: ["Kherson", "Kharkiv"]
+  val_regions: ["Mykolaiv"]
+  test_regions: ["Tripoli"]
+  train_count: 160
+  val_count: 35
+  test_count: 35
+
+model:
+  architecture: "unet"
+  encoder_name: "resnet18"
+  encoder_weights: "imagenet"
+  in_channels: 3
+  classes: 1
+
+training:
+  epochs: 8
+  batch_size: 8
+  learning_rate: 0.0005
+  device: "cpu"  # auto-detected (CPU available)
+  save_dir: "results/checkpoints"
+
+polygonization:
+  min_area_pixels: 25
+  simplify_tolerance: 0.5

@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-09-30T05:03:24Z",
+  "demo_run": {
+    "analysis_id": "demo_e2e_f49f31",
+    "tile": "f49f31",
+    "roi": [
+      3072,
+      2048,
+      4096,
+      3072
+    ],
+    "total_time_s": 38.85,
+    "metrics": {
+      "analysis_id": "demo_e2e_f49f31",
+      "status": "completed",
+      "input_dimensions": [
+        1024,
+        1024
+      ],
+      "crs": "EPSG:32732",
+      "georeferenced": true,
+      "processing_time": 38.8,
+      "stage_timings": {
+        "input_validation": 0.103,
+        "preprocessing": 0.414,
+        "building_inference": 1.462,
+        "building_polygonization": 3.437,
+        "road_extraction": 3.328,
+        "road_fusion": 6.205,
+        "parcel_generation": 23.17,
+        "parcel_intelligence": 0.513,
+        "ready_for_review": 0.17,
+        "total": 38.8
+      },
+      "building_count": 254,
+      "road_corridor_count": 4,
+      "road_length_m": 1571.88,
+      "parcel_candidate_count": 254,
+      "geometry_validity_pct": 100.0,
+      "confidence_statistics": {
+        "mean": 0.8817,
+        "median": 0.8953,
+        "min": 0.6254,
+        "max": 1.0
+      },
+      "flagged_parcel_count": 210,
+      "review_status_counts": {
+        "total": 254,
+        "unreviewed": 254,
+        "accepted": 0,
+        "edited": 0,
+        "needs_review": 0,
+        "rejected": 0
+      },
+      "disclaimer": "AI-generated parcel boundaries are preliminary spatial candidates and require professional cadastral/survey verification. Review status does not establish legal ownership or boundary rights."
+    },
+    "all_files_present": true
+  },
+  "generalization_run": {
+    "analysis_id": "gen_e2e_abe1a3",
+    "tile": "abe1a3",
+    "roi": [
+      3000,
+      3000,
+      4024,
+      4024
+    ],
+    "total_time_s": 47.49,
+    "metrics": {
+      "analysis_id": "gen_e2e_abe1a3",
+      "status": "completed",
+      "input_dimensions": [
+        1024,
+        1024
+      ],
+      "crs": "EPSG:32732",
+      "georeferenced": true,
+      "processing_time": 47.46,
+      "stage_timings": {
+        "input_validation": 0.103,
+        "preprocessing": 0.953,
+        "building_inference": 1.015,
+        "building_polygonization": 2.39,
+        "road_extraction": 3.628,
+        "road_fusion": 11.217,
+        "parcel_generation": 27.594,
+        "parcel_intelligence": 0.447,
+        "ready_for_review": 0.111,
+        "total": 47.46
+      },
+      "building_count": 246,
+      "road_corridor_count": 8,
+      "road_length_m": 2063.66,
+      "parcel_candidate_count": 246,
+      "geometry_validity_pct": 100.0,
+      "confidence_statistics": {
+        "mean": 0.8911,
+        "median": 0.901,
+        "min": 0.6466,
+        "max": 1.0
+      },
+      "flagged_parcel_count": 224,
+      "review_status_counts": {
+        "total": 246,
+        "unreviewed": 246,
+        "accepted": 0,
+        "edited": 0,
+        "needs_review": 0,
+        "rejected": 0
+      },
+      "disclaimer": "AI-generated parcel boundaries are preliminary spatial candidates and require professional cadastral/survey verification. Review status does not establish legal ownership or boundary rights."
+    },
+    "all_files_present": true
+  },
+  "reference_8b8c724c7e_untouched": true
+}

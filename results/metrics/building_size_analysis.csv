@@ -1,0 +1,4 @@
+category,count,mean_area_px,mean_iou,mean_dice,mean_recall
+small,78,107.6,0.3217,0.4522,0.4751
+medium,268,689.4,0.3241,0.4599,0.4553
+large,78,3309.4,0.3338,0.4723,0.476

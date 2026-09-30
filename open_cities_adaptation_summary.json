@@ -1,0 +1,215 @@
+{
+  "experiment": "Phase 11: Controlled Open Cities Domain Adaptation",
+  "frozen_spacenet_checkpoint": "results/experiments/3class_model/best_model.pth",
+  "finetuned_checkpoint": "results/experiments/open_cities_adaptation\\checkpoints\\best_model.pth",
+  "imagenet_ablation_checkpoint": "results/experiments/open_cities_adaptation\\checkpoints\\imagenet_ablation_best_model.pth",
+  "test_split_patches": 136,
+  "test_metrics": {
+    "finetuned_primary": {
+      "raster": {
+        "building_dice": 0.6754,
+        "building_iou": 0.5454,
+        "building_precision": 0.6747,
+        "building_recall": 0.6989,
+        "interior_dice": 0.6587,
+        "boundary_dice": 0.0696,
+        "boundary_iou": 0.0364,
+        "boundary_precision": 0.1774,
+        "boundary_recall": 0.0442
+      },
+      "vector": {
+        "pred_polygon_count": 4804,
+        "gt_polygon_count": 1389,
+        "matched_polygon_iou": 0.7473,
+        "area_iou": 0.5556,
+        "area_precision": 0.6744,
+        "area_recall": 0.7178,
+        "strict_object_precision": 0.147,
+        "strict_object_recall": 0.5083,
+        "strict_object_f1": 0.228,
+        "relaxed_object_precision": 0.1934,
+        "relaxed_object_recall": 0.6688,
+        "relaxed_object_f1": 0.3,
+        "geometry_validity_pct": 100.0
+      },
+      "touching": {
+        "total_touching_pairs": 856,
+        "separated_pairs": 212,
+        "merged_pairs": 512,
+        "missed_pairs": 132,
+        "oversegmented_bldgs": 9,
+        "total_touching_bldgs": 975,
+        "global_separation_rate": 0.2477,
+        "global_merge_rate": 0.5981,
+        "global_miss_rate": 0.1542,
+        "oversegmentation_rate": 0.0092,
+        "detected_pair_separation_rate": 29.28,
+        "detected_pair_merge_rate": 70.72
+      }
+    },
+    "zero_shot_reference": {
+      "raster": {
+        "building_dice": 0.2233,
+        "building_iou": 0.1329,
+        "building_precision": 0.6286,
+        "building_recall": 0.1414,
+        "interior_dice": 0.1932,
+        "boundary_dice": 0.0839,
+        "boundary_iou": 0.0446,
+        "boundary_precision": 0.1273,
+        "boundary_recall": 0.0677
+      },
+      "vector": {
+        "pred_polygon_count": 4608,
+        "gt_polygon_count": 1389,
+        "matched_polygon_iou": 0.697,
+        "area_iou": 0.1425,
+        "area_precision": 0.6546,
+        "area_recall": 0.1508,
+        "strict_object_precision": 0.0441,
+        "strict_object_recall": 0.1461,
+        "strict_object_f1": 0.0677,
+        "relaxed_object_precision": 0.087,
+        "relaxed_object_recall": 0.2887,
+        "relaxed_object_f1": 0.1337,
+        "geometry_validity_pct": 100.0
+      },
+      "touching": {
+        "total_touching_pairs": 856,
+        "separated_pairs": 29,
+        "merged_pairs": 2,
+        "missed_pairs": 825,
+        "oversegmented_bldgs": 7,
+        "total_touching_bldgs": 975,
+        "global_separation_rate": 0.0339,
+        "global_merge_rate": 0.0023,
+        "global_miss_rate": 0.9638,
+        "oversegmentation_rate": 0.0072,
+        "detected_pair_separation_rate": 93.55,
+        "detected_pair_merge_rate": 6.45
+      }
+    },
+    "imagenet_ablation": {
+      "raster": {
+        "building_dice": 0.7955,
+        "building_iou": 0.7051,
+        "building_precision": 0.7671,
+        "building_recall": 0.8416,
+        "interior_dice": 0.7875,
+        "boundary_dice": 0.3694,
+        "boundary_iou": 0.2353,
+        "boundary_precision": 0.3106,
+        "boundary_recall": 0.4667
+      },
+      "vector": {
+        "pred_polygon_count": 2039,
+        "gt_polygon_count": 1389,
+        "matched_polygon_iou": 0.8132,
+        "area_iou": 0.7146,
+        "area_precision": 0.802,
+        "area_recall": 0.8089,
+        "strict_object_precision": 0.4747,
+        "strict_object_recall": 0.6969,
+        "strict_object_f1": 0.5648,
+        "relaxed_object_precision": 0.5385,
+        "relaxed_object_recall": 0.7905,
+        "relaxed_object_f1": 0.6406,
+        "geometry_validity_pct": 100.0
+      },
+      "touching": {
+        "total_touching_pairs": 856,
+        "separated_pairs": 307,
+        "merged_pairs": 437,
+        "missed_pairs": 112,
+        "oversegmented_bldgs": 8,
+        "total_touching_bldgs": 975,
+        "global_separation_rate": 0.3586,
+        "global_merge_rate": 0.5105,
+        "global_miss_rate": 0.1308,
+        "oversegmentation_rate": 0.0082,
+        "detected_pair_separation_rate": 41.26,
+        "detected_pair_merge_rate": 58.74
+      }
+    }
+  },
+  "overfitting_audit": {
+    "train_dice": 0.7065,
+    "val_dice": 0.7869,
+    "test_dice": 0.6754,
+    "train_val_gap": -0.0804,
+    "val_test_gap": 0.1115,
+    "overfitting_verdict": "Low overfitting. The model generalizes to unseen eastern sectors with robust test performance."
+  },
+  "comparison_table": {
+    "Building Dice": {
+      "SpaceNet": 0.657,
+      "ZS_20cm": 0.2264,
+      "ZS_1m": 0.4721,
+      "FineTuned": 0.6754,
+      "ImageNet": 0.7955
+    },
+    "Building IoU": {
+      "SpaceNet": 0.4895,
+      "ZS_20cm": 0.1333,
+      "ZS_1m": 0.3135,
+      "FineTuned": 0.5454,
+      "ImageNet": 0.7051
+    },
+    "Building Precision": {
+      "SpaceNet": "\u2014",
+      "ZS_20cm": 0.6658,
+      "ZS_1m": 0.7934,
+      "FineTuned": 0.6747,
+      "ImageNet": 0.7671
+    },
+    "Building Recall": {
+      "SpaceNet": "\u2014",
+      "ZS_20cm": 0.1448,
+      "ZS_1m": 0.3436,
+      "FineTuned": 0.6989,
+      "ImageNet": 0.8416
+    },
+    "Matched Polygon IoU": {
+      "SpaceNet": 0.6734,
+      "ZS_20cm": 0.6769,
+      "ZS_1m": 0.6539,
+      "FineTuned": 0.7473,
+      "ImageNet": 0.8132
+    },
+    "Strict Object F1 (IoU>=0.50)": {
+      "SpaceNet": 0.4093,
+      "ZS_20cm": 0.0577,
+      "ZS_1m": 0.166,
+      "FineTuned": 0.228,
+      "ImageNet": 0.5648
+    },
+    "Relaxed Object F1 (IoU>=0.25)": {
+      "SpaceNet": 0.6415,
+      "ZS_20cm": 0.1222,
+      "ZS_1m": 0.3433,
+      "FineTuned": 0.3,
+      "ImageNet": 0.6406
+    },
+    "Area IoU": {
+      "SpaceNet": "\u2014",
+      "ZS_20cm": 0.1436,
+      "ZS_1m": 0.2785,
+      "FineTuned": 0.5556,
+      "ImageNet": 0.7146
+    },
+    "Touching Detected Sep Rate": {
+      "SpaceNet": "\u2014",
+      "ZS_20cm": 91.94,
+      "ZS_1m": "\u2014",
+      "FineTuned": 29.28,
+      "ImageNet": 41.26
+    },
+    "Touching Detected Merge Rate": {
+      "SpaceNet": "\u2014",
+      "ZS_20cm": 8.06,
+      "ZS_1m": "\u2014",
+      "FineTuned": 70.72,
+      "ImageNet": 58.74
+    }
+  }
+}

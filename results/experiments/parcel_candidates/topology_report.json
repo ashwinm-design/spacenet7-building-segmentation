@@ -1,0 +1,42 @@
+{
+  "dataset": "Open Cities f49f31 Demo Subregion (ROI: 3072, 2048, 4096, 3072)",
+  "crs": "EPSG:32732",
+  "input_building_count": 254,
+  "ground_truth_status": {
+    "ground_truth_available": false,
+    "details": "No parcel ground-truth layer is available for this dataset.",
+    "statement": "No parcel ground-truth layer is available for this dataset."
+  },
+  "voronoi_topology": {
+    "total_candidates": 254,
+    "initial_invalid_geometries": 0,
+    "valid_geometries_final": 254,
+    "validity_percentage": 100.0,
+    "repaired_geometries": 1,
+    "flagged_invalid_geometries": 0,
+    "zero_area_geometries": 0,
+    "multipolygon_geometries": 1,
+    "duplicate_geometries": 0
+  },
+  "voronoi_overlaps": {
+    "pairwise_overlap_count": 0,
+    "total_overlap_area_m2": 0.0,
+    "max_overlap_area_m2": 0.0
+  },
+  "concave_hull_topology": {
+    "total_candidates": 254,
+    "initial_invalid_geometries": 0,
+    "valid_geometries_final": 254,
+    "validity_percentage": 100.0,
+    "repaired_geometries": 0,
+    "flagged_invalid_geometries": 0,
+    "zero_area_geometries": 0,
+    "multipolygon_geometries": 0,
+    "duplicate_geometries": 0
+  },
+  "concave_hull_overlaps": {
+    "pairwise_overlap_count": 1,
+    "total_overlap_area_m2": 1.62,
+    "max_overlap_area_m2": 1.62
+  }
+}

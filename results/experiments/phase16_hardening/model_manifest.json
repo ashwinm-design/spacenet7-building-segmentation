@@ -1,0 +1,55 @@
+{
+  "phase": "Phase 16 — Demo Hardening",
+  "audit_timestamp": "2026-09-30T05:26:00Z",
+  "audit_status": "ALL_REQUIRED_CHECKPOINTS_VERIFIED",
+  "models": [
+    {
+      "name": "Building Segmentation Model (SpaceNet 7 3-Class)",
+      "filename": "best_model.pth",
+      "relative_path": "results/checkpoints/best_model.pth",
+      "architecture": "ResNet34 U-Net (3-Class: Background, Building Body, Building Boundary)",
+      "file_size_bytes": 172125275,
+      "file_size_mb": 164.15,
+      "sha256": "529654f5d5e934c9eef71539821a26736982116b2ab897729f95cadef51870c6",
+      "purpose": "Primary inference checkpoint loaded by backend for aerial building footprint segmentation.",
+      "required_for_demo": true,
+      "status": "frozen_and_verified"
+    },
+    {
+      "name": "Road Deep Learning Model (ResNet18 U-Net)",
+      "filename": "best_road_model.pth",
+      "relative_path": "results/experiments/road_dl/checkpoints/best_road_model.pth",
+      "architecture": "ResNet18 U-Net (Binary Road Segmentation)",
+      "file_size_bytes": 57423539,
+      "file_size_mb": 54.76,
+      "sha256": "4e53c158d6ee77ea415d0c064d04d0b0404678fe110c696ca6cb7e61132ccd18",
+      "purpose": "Deep learning road feature extraction checkpoint loaded by pipeline_service for Phase 13C/13D road fusion.",
+      "required_for_demo": true,
+      "status": "frozen_and_verified"
+    },
+    {
+      "name": "SpaceNet 7 3-Class Experiment Baseline",
+      "filename": "best_model.pth",
+      "relative_path": "results/experiments/3class_model/best_model.pth",
+      "architecture": "ResNet34 U-Net (3-Class)",
+      "file_size_bytes": 172128283,
+      "file_size_mb": 164.15,
+      "sha256": "3aa0736c7430c3b31755cc5afc0576b196cc7b6292eae0c57cd907fc9b97dbed",
+      "purpose": "SpaceNet 7 reference benchmark training checkpoint.",
+      "required_for_demo": false,
+      "status": "frozen_and_verified"
+    },
+    {
+      "name": "Open Cities Adaptation Checkpoint",
+      "filename": "best_model.pth",
+      "relative_path": "results/experiments/open_cities_adaptation/checkpoints/best_model.pth",
+      "architecture": "ResNet18 U-Net",
+      "file_size_bytes": 57426019,
+      "file_size_mb": 54.77,
+      "sha256": "ca8e80544ffd1b5bce4a9abe897a0136d46bd5e3da372974acbd3d38a1a37528",
+      "purpose": "Open Cities domain adaptation fine-tuning checkpoint.",
+      "required_for_demo": false,
+      "status": "frozen_and_verified"
+    }
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "per_image_metrics": [
+    {
+      "idx": 0,
+      "filename": "test_0719_Tripoli_2022_R2C1_3000_3500_11000_11500_jpg.rf.bb6cebfd8611887232eda68a9fcf80e1.jpg",
+      "iou": 0.17161691729606635,
+      "dice": 0.2929573903371805,
+      "precision": 0.17668140921241873,
+      "recall": 0.8568786982513168,
+      "boundary_f1": 0.28025576222747406,
+      "boundary_precision": 0.21117696880420372,
+      "boundary_recall": 0.41649966619355394,
+      "hausdorff_distance": 91.4166286842826,
+      "gt_building_px": 5408,
+      "pred_building_px": 26228
+    },
+    {
+      "idx": 1,
+      "filename": "test_0591_Tripoli_2022_R1C3_7500_8000_5500_6000_jpg.rf.992ded1758909546d8686190d1ad1ed2.jpg",
+      "iou": 0.3099392812398135,
+      "dice": 0.4732116757950221,
+      "precision": 0.3531868474566562,
+      "recall": 0.7168068821736475,
+      "boundary_f1": 0.2579694833367497,
+      "boundary_precision": 0.18938815201129325,
+      "boundary_recall": 0.40441939798243814,
+      "hausdorff_distance": 79.88116173416608,
+      "gt_building_px": 15809,
+      "pred_building_px": 32085
+    },
+    {
+      "idx": 2,
+      "filename": "test_0045_Tripoli_2022_V2_R3C5_1500_2000_10000_10500_jpg.rf.0e772b2de9cc22664593699467f12515.jpg",
+      "iou": 0.03273745444050453,
+      "dice": 0.06339937454360806,
+      "precision": 0.3340659355295254,
+      "recall": 0.035023041696999296,
+      "boundary_f1": 0.026858776389985003,
+      "boundary_precision": 0.10997963521389076,
+      "boundary_recall": 0.015297450703881742,
+      "hausdorff_distance": 122.64175471673585,
+      "gt_building_px": 4340,
+      "pred_building_px": 455
+    },
+    {
+      "idx": 3,
+      "filename": "test_0496_Tripoli_2022_R3C2_8500_9000_7000_7500_jpg.rf.85ebf6be2ed21c1b37205842441ab4cd.jpg",
+      "iou": 0.4606605321541957,
+      "dice": 0.6307564584746116,
+      "precision": 0.7455983374851008,
+      "recall": 0.5465701832530756,
+      "boundary_f1": 0.1810028780973668,
+      "boundary_precision": 0.14378320944274356,
+      "boundary_recall": 0.24422382685122315,
+      "hausdorff_distance": 45.044422518220834,
+      "gt_building_px": 23631,
+      "pred_building_px": 17323
+    },
+    {
+      "idx": 4,
+      "filename": "test_0768_Tripoli_2022_R2C3_5500_6000_14000_14500_jpg.rf.cb43463f6016ea1ed9d306d7ae67270c.jpg",
+      "iou": 0.4604261796453253,
+      "dice": 0.6305367379035677,
+      "precision": 0.6404149465819398,
+      "recall": 0.6209586370090364,
+      "boundary_f1": 0.3480026327202068,
+      "boundary_precision": 0.340015302319814,
+      "boundary_recall": 0.35637530082495983,
+      "hausdorff_distance": 46.06517122512408,
+      "gt_building_px": 9743,
+      "pred_building_px": 9447
+    },
+    {
+      "idx": 5,
+      "filename": "test_0070_Tripoli_2022_V2_R2C5_8000_8500_15500_16000-Copy_jpg.rf.15f397a43570e4eb7682a069215e0c82.jpg",
+      "iou": 0.3796483890347266,
+      "dice": 0.5503552818782399,
+      "precision": 0.8208280345032036,
+      "recall": 0.41395282552455265,
+      "boundary_f1": 0.2784995579915776,
+      "boundary_precision": 0.4216502653886069,
+      "boundary_recall": 0.20791340081824808,
+      "hausdorff_distance": 237.64890069175578,
+      "gt_building_px": 14033,
+      "pred_building_px": 7077
+    },
+    {
+      "idx": 6,
+      "filename": "test_0400_Tripoli_2022_R1C3_13000_13500_11500_12000_jpg.rf.6bd7f1c6c8a41a069d5a56336bfec173.jpg",
+      "iou": 0.5105232293275218,
+      "dice": 0.6759554827160748,
+      "precision": 0.7069385545694362,
+      "recall": 0.6475741797133999,
+      "boundary_f1": 0.38393577626941183,
+      "boundary_precision": 0.38012618304677626,
+      "boundary_recall": 0.387823521605495,
+      "hausdorff_distance": 36.22154055254967,
+      "gt_building_px": 12099,
+      "pred_building_px": 11083
+    },
+    {
+      "idx": 7,
+      "filename": "test_0763_Tripoli_2022_R3C2_3500_4000_11500_12000_jpg.rf.c98e0a9efbb2c68dc4f4dfe30be29424.jpg",
+      "iou": 0.6423484454329774,
+      "dice": 0.7822316235026725,
+      "precision": 0.7667426913193566,
+      "recall": 0.7983592401126166,
+      "boundary_f1": 0.47583867690218395,
+      "boundary_precision": 0.5155875301696293,
+      "boundary_recall": 0.44178082210897923,
+      "hausdorff_distance": 18.35755975068582,
+      "gt_building_px": 4632,
+      "pred_building_px": 4823
+    },
+    {
+      "idx": 8,
+      "filename": "test_0420_Tripoli_2022_R3C2_9000_9500_14000_14500_jpg.rf.7123ddc596b5955c3898cb6e1cdc92fa.jpg",
+      "iou": 0.5402142749705587,
+      "dice": 0.7014793769128305,
+      "precision": 0.9364373528725559,
+      "recall": 0.5607769423902901,
+      "boundary_f1": 0.3303446830762227,
+      "boundary_precision": 0.33340266236826066,
+      "boundary_recall": 0.3273432715280083,
+      "hausdorff_distance": 23.706539182259394,
+      "gt_building_px": 12768,
+      "pred_building_px": 7646
+    },
+    {
+      "idx": 9,
+      "filename": "test_0680_Tripoli_2022_R3C3_11000_11500_13000_13500_jpg.rf.b19f39c6f469f8591284b8b43ef56e6c.jpg",
+      "iou": 0.3722460373469997,
+      "dice": 0.5425354159431504,
+      "precision": 0.43810864725588305,
+      "recall": 0.7123235406882251,
+      "boundary_f1": 0.18641528783821482,
+      "boundary_precision": 0.15098833075708779,
+      "boundary_recall": 0.24356511746309448,
+      "hausdorff_distance": 137.43725841270262,
+      "gt_building_px": 5242,
+      "pred_building_px": 8523
+    },
+    {
+      "idx": 10,
+      "filename": "test_0330_Tripoli_2022_V2_R2C2_6500_7000_11500_12000_jpg.rf.594ad6d58c0ea8c7532138fab00049ea.jpg",
+      "iou": 0.051615915388721484,
+      "dice": 0.09816495663485769,
+      "precision": 0.7469969971869391,
+      "recall": 0.05253431895181973,
+      "boundary_f1": 0.0463267317031796,
+      "boundary_precision": 0.20063694318430766,
+      "boundary_recall": 0.026186715518647707,
+      "hausdorff_distance": 110.47624178980746,
+      "gt_building_px": 18940,
+      "pred_building_px": 1332
+    },
+    {
+      "idx": 11,
+      "filename": "test_0545_Tripoli_2022_V2_R2C1_11500_12000_15500_16000_jpg.rf.8e2ee15d4c3cc5d19981fcc15e6e2cce.jpg",
+      "iou": 0.2429149798499675,
+      "dice": 0.390879478887486,
+      "precision": 0.7792207793076661,
+      "recall": 0.26086956531477346,
+      "boundary_f1": 0.19670718878656387,
+      "boundary_precision": 0.35480624088837126,
+      "boundary_recall": 0.13607411713258558,
+      "hausdorff_distance": 91.83681179135085,
+      "gt_building_px": 7590,
+      "pred_building_px": 2541
+    },
+    {
+      "idx": 12,
+      "filename": "test_0697_Tripoli_2022_R2C2_14500_15000_12000_12500_jpg.rf.b4e834ccb15b91fec63723ca19953f4f.jpg",
+      "iou": 0.5566849101004469,
+      "dice": 0.7152184831802441,
+      "precision": 0.6740296623669126,
+      "recall": 0.761768901579807,
+      "boundary_f1": 0.3505211612898949,
+      "boundary_precision": 0.3620399113647858,
+      "boundary_recall": 0.3397137151015551,
+      "hausdorff_distance": 75.27283706623525,
+      "gt_building_px": 22432,
+      "pred_building_px": 25352
+    },
+    {
+      "idx": 13,
+      "filename": "test_0191_Tripoli_2022_R1C1_14000_14500_6000_6500_jpg.rf.31634f63df14576a36edbf619db77d2d.jpg",
+      "iou": 0.615771601064525,
+      "dice": 0.7622012921335436,
+      "precision": 0.7224613265851194,
+      "recall": 0.8065676395539231,
+      "boundary_f1": 0.32930765032897774,
+      "boundary_precision": 0.33503675188414167,
+      "boundary_recall": 0.3237721553697895,
+      "hausdorff_distance": 24.186773244895647,
+      "gt_building_px": 36421,
+      "pred_building_px": 40661
+    },
+    {
+      "idx": 14,
+      "filename": "test_0516_Tripoli_2022_R3C3_11000_11500_6500_7000_jpg.rf.886fa6d3751f4f270ac147e53ffc0e47.jpg",
+      "iou": 0.2632406923154622,
+      "dice": 0.41677044424840587,
+      "precision": 0.8590986880438685,
+      "recall": 0.27511874328185626,
+      "boundary_f1": 0.268783863698504,
+      "boundary_precision": 0.2849740937273484,
+      "boundary_recall": 0.254335260546627,
+      "hausdorff_distance": 26.68332812825267,
+      "gt_building_px": 5474,
+      "pred_building_px": 1753
+    },
+    {
+      "idx": 15,
+      "filename": "test_0870_Tripoli_2022_V2_R2C6_15000_15500_8500_9000_jpg.rf.e5cbf5858126caf71bcbbf2dc9fae428.jpg",
+      "iou": 3.984063743432644e-10,
+      "dice": 3.984063743432644e-10,
+      "precision": 1.0,
+      "recall": 3.984063743432644e-10,
+      "boundary_f1": 1.452431370440914e-09,
+      "boundary_precision": 1.0,
+      "boundary_recall": 7.262164119635319e-10,
+      "hausdorff_distance": null,
+      "gt_building_px": 2510,
+      "pred_building_px": 0
+    },
+    {
+      "idx": 16,
+      "filename": "test_0582_Tripoli_2022_R3C2_10500_11000_3000_3500_jpg.rf.960b82f530277b1f749faf35796de87b.jpg",
+      "iou": 0.31358300734336686,
+      "dice": 0.4774468085551109,
+      "precision": 0.8154069767978468,
+      "recall": 0.33754512643350837,
+      "boundary_f1": 0.20430360175713383,
+      "boundary_precision": 0.2570323490657411,
+      "boundary_recall": 0.1695269018623546,
+      "hausdorff_distance": 53.08483775994799,
+      "gt_building_px": 8310,
+      "pred_building_px": 3440
+    },
+    {
+      "idx": 17,
+      "filename": "test_0494_Tripoli_2022_R1C1_13500_14000_2500_3000_jpg.rf.853073de99a097a7cae0da01b90ec8a2.jpg",
+      "iou": 0.3830569303527233,
+      "dice": 0.5539279286913755,
+      "precision": 0.6868545332042735,
+      "recall": 0.4641091279074198,
+      "boundary_f1": 0.21581444881346473,
+      "boundary_precision": 0.18388834482664965,
+      "boundary_recall": 0.26115683328374206,
+      "hausdorff_distance": 36.76955262170047,
+      "gt_building_px": 28517,
+      "pred_building_px": 19269
+    },
+    {
+      "idx": 18,
+      "filename": "test_0278_Tripoli_2022_R2C3_12000_12500_5500_6000_jpg.rf.49a08c3d512ca85e627f9c243fe71fbb.jpg",
+      "iou": 0.4698722310826437,
+      "dice": 0.6393375167349379,
+      "precision": 0.7670945445856462,
+      "recall": 0.548059964766485,
+      "boundary_f1": 0.2669164029250048,
+      "boundary_precision": 0.28243601074968316,
+      "boundary_recall": 0.2530144298768503,
+      "hausdorff_distance": 40.049968789001575,
+      "gt_building_px": 11340,
+      "pred_building_px": 8102
+    },
+    {
+      "idx": 19,
+      "filename": "test_0455_Tripoli_2022_R3C2_0_500_12500_13000_jpg.rf.7cd87af00282419c30449e6ca69c1e44.jpg",
+      "iou": 0.2986861314380521,
+      "dice": 0.45998201441884096,
+      "precision": 0.3669626043075094,
+      "recall": 0.6161722632711681,
+      "boundary_f1": 0.19902300484616425,
+      "boundary_precision": 0.16467872274631035,
+      "boundary_recall": 0.25146886038440985,
+      "hausdorff_distance": 58.69412236331676,
+      "gt_building_px": 6641,
+      "pred_building_px": 11151
+    },
+    {
+      "idx": 20,
+      "filename": "test_0546_Tripoli_2022_V2_R2C4_9500_10000_13500_14000_jpg.rf.8e532281fee8e801859a7f7547c17072.jpg",
+      "iou": 0.47267657997465834,
+      "dice": 0.6419285624358243,
+      "precision": 0.5376889735133007,
+      "recall": 0.7963049945520111,
+      "boundary_f1": 0.1526975542875606,
+      "boundary_precision": 0.13791911540341545,
+      "boundary_recall": 0.17102443241704912,
+      "hausdorff_distance": 223.14345161801185,
+      "gt_building_px": 6387,
+      "pred_building_px": 9459
+    },
+    {
+      "idx": 21,
+      "filename": "test_0025_Tripoli_2022_R2C1_3500_4000_4500_5000_jpg.rf.08611dbd95e5b81cd323e758951cc0f4.jpg",
+      "iou": 0.34410096745557095,
+      "dice": 0.5120165460387998,
+      "precision": 0.9065475318724846,
+      "recall": 0.35675582203385087,
+      "boundary_f1": 0.13500538067379778,
+      "boundary_precision": 0.13936549058929013,
+      "boundary_recall": 0.1309107497140169,
+      "hausdorff_distance": 91.08786966440702,
+      "gt_building_px": 17348,
+      "pred_building_px": 6827
+    },
+    {
+      "idx": 22,
+      "filename": "test_0605_Tripoli_2022_V2_R1C1_11500_12000_5500_6000_jpg.rf.9ecbb79afba208efa888dd0998e654c4.jpg",
+      "iou": 0.2684749986257164,
+      "dice": 0.4233035714543168,
+      "precision": 0.4422574627385954,
+      "recall": 0.4059075342974394,
+      "boundary_f1": 0.2927188025230955,
+      "boundary_precision": 0.3448477753035036,
+      "boundary_recall": 0.25428119164566393,
+      "hausdorff_distance": 147.2311108427835,
+      "gt_building_px": 11680,
+      "pred_building_px": 10720
+    },
+    {
+      "idx": 23,
+      "filename": "test_0062_Tripoli_2022_R1C1_10000_10500_13500_14000_jpg.rf.13b2b1dc7da7b42cd30bc82b6a359495.jpg",
+      "iou": 0.3758840169951951,
+      "dice": 0.5463891030699977,
+      "precision": 0.5500646830763226,
+      "recall": 0.5427623181239335,
+      "boundary_f1": 0.17657380496283706,
+      "boundary_precision": 0.12474219478523987,
+      "boundary_recall": 0.3021012746637786,
+      "hausdorff_distance": 140.57738082636197,
+      "gt_building_px": 19585,
+      "pred_building_px": 19325
+    },
+    {
+      "idx": 24,
+      "filename": "test_0784_Tripoli_2022_V2_R2C1_6000_6500_2500_3000_jpg.rf.cee1b9f8119c3ffd4012fd37e5817fe7.jpg",
+      "iou": 0.2740701663745529,
+      "dice": 0.43022774338918673,
+      "precision": 0.9765037594205792,
+      "recall": 0.2758895381635981,
+      "boundary_f1": 0.2936541614898377,
+      "boundary_precision": 0.7694174762878216,
+      "boundary_recall": 0.18145392147598516,
+      "hausdorff_distance": 183.17477992343814,
+      "gt_building_px": 3766,
+      "pred_building_px": 1064
+    },
+    {
+      "idx": 25,
+      "filename": "test_0921_Tripoli_2022_V2_R2C1_8000_8500_8000_8500_jpg.rf.f1f733a15d08386a867cd00b0431757d.jpg",
+      "iou": 0.010107325257366503,
+      "dice": 0.020012378841550837,
+      "precision": 0.7376425865488875,
+      "recall": 0.01014379090143039,
+      "boundary_f1": 0.009635970222008546,
+      "boundary_precision": 0.09491525577133007,
+      "boundary_recall": 0.0050756821349519,
+      "hausdorff_distance": 126.57408897558773,
+      "gt_building_px": 19125,
+      "pred_building_px": 263
+    },
+    {
+      "idx": 26,
+      "filename": "test_0739_Tripoli_2022_V2_R3C5_0_500_4000_4500_jpg.rf.c151f69a365d064931bd8341f581164d.jpg",
+      "iou": 0.037192142881923206,
+      "dice": 0.0717169775935669,
+      "precision": 0.12835512762272708,
+      "recall": 0.049759872058463196,
+      "boundary_f1": 0.030401749737530973,
+      "boundary_precision": 0.08405341784441993,
+      "boundary_recall": 0.018557058789705677,
+      "hausdorff_distance": 105.34229919647663,
+      "gt_building_px": 7496,
+      "pred_building_px": 2906
+    },
+    {
+      "idx": 27,
+      "filename": "test_0769_Tripoli_2022_R2C1_4000_4500_1500_2000_jpg.rf.ca9ae9fc01af252e4f9e82752bdd49ea.jpg",
+      "iou": 0.5116477459471325,
+      "dice": 0.6769404410628174,
+      "precision": 0.8452032520493005,
+      "recall": 0.5645499964112266,
+      "boundary_f1": 0.22020381670590222,
+      "boundary_precision": 0.2037815127723148,
+      "boundary_recall": 0.23950617302728244,
+      "hausdorff_distance": 73.78346698278686,
+      "gt_building_px": 13811,
+      "pred_building_px": 9225
+    },
+    {
+      "idx": 28,
+      "filename": "test_0607_Tripoli_2022_R2C1_1500_2000_5000_5500_jpg.rf.9ed71bd7ad49029837b7f0a3cd4df8ba.jpg",
+      "iou": 0.042451304015890035,
+      "dice": 0.08144515493938512,
+      "precision": 0.24886191227281415,
+      "recall": 0.04868997260827655,
+      "boundary_f1": 0.06539786067480993,
+      "boundary_precision": 0.08422664671555556,
+      "boundary_recall": 0.053449951715759655,
+      "hausdorff_distance": 103.46496991735899,
+      "gt_building_px": 13473,
+      "pred_building_px": 2636
+    },
+    {
+      "idx": 29,
+      "filename": "test_0328_Tripoli_2022_R3C1_8000_8500_1000_1500_jpg.rf.589e6c0d5efa2808241b19fc8cd8d88e.jpg",
+      "iou": 0.1782376026273109,
+      "dice": 0.30254950649170054,
+      "precision": 0.893738819358233,
+      "recall": 0.1820965155866674,
+      "boundary_f1": 0.05268979582731965,
+      "boundary_precision": 0.07828967206314674,
+      "boundary_recall": 0.03970678084305027,
+      "hausdorff_distance": 48.60041152089147,
+      "gt_building_px": 13718,
+      "pred_building_px": 2795
+    },
+    {
+      "idx": 30,
+      "filename": "test_0277_Tripoli_2022_R2C3_4500_5000_10000_10500_jpg.rf.48c05eb9eebee76f6f453530c44815cd.jpg",
+      "iou": 0.37301979260065266,
+      "dice": 0.5433567594614754,
+      "precision": 0.3969518111498645,
+      "recall": 0.8608627038522828,
+      "boundary_f1": 0.13831261938629244,
+      "boundary_precision": 0.10095564823560944,
+      "boundary_recall": 0.21955768739153805,
+      "hausdorff_distance": 114.27160627207444,
+      "gt_building_px": 11406,
+      "pred_building_px": 24736
+    },
+    {
+      "idx": 31,
+      "filename": "test_0531_Tripoli_2022_R2C2_10000_10500_10000_10500_jpg.rf.8b24f85c1f4f206ea14d0c7f5afb6d9c.jpg",
+      "iou": 0.23032495191468846,
+      "dice": 0.37441320122459987,
+      "precision": 0.49300699307030377,
+      "recall": 0.30181178814296983,
+      "boundary_f1": 0.07263367878736518,
+      "boundary_precision": 0.0802598493126027,
+      "boundary_recall": 0.06633183251362455,
+      "hausdorff_distance": 95.77577981932593,
+      "gt_building_px": 13081,
+      "pred_building_px": 8008
+    },
+    {
+      "idx": 32,
+      "filename": "test_0427_Tripoli_2022_R1C2_6500_7000_15000_15500_jpg.rf.72edb021c8824b8393deefc7c5b09356.jpg",
+      "iou": 0.35461365346176943,
+      "dice": 0.5235642687310426,
+      "precision": 0.43849721712073314,
+      "recall": 0.6495808712863019,
+      "boundary_f1": 0.18614423772121597,
+      "boundary_precision": 0.127000575805757,
+      "boundary_recall": 0.3483891347604583,
+      "hausdorff_distance": 196.84003657792792,
+      "gt_building_px": 7277,
+      "pred_building_px": 10780
+    },
+    {
+      "idx": 33,
+      "filename": "test_0120_Tripoli_2022_R3C1_5500_6000_13500_14000_jpg.rf.206709035281cfe168c8ffa42ab7517e.jpg",
+      "iou": 0.38052856240300353,
+      "dice": 0.5512795211136583,
+      "precision": 0.9574954296258009,
+      "recall": 0.387066974652465,
+      "boundary_f1": 0.25701894530731106,
+      "boundary_precision": 0.29066927227878137,
+      "boundary_recall": 0.23035230367201853,
+      "hausdorff_distance": 29.698484809834994,
+      "gt_building_px": 10825,
+      "pred_building_px": 4376
+    },
+    {
+      "idx": 34,
+      "filename": "test_0650_Tripoli_2022_V2_R2C3_1500_2000_11000_11500_jpg.rf.a850f80be00aa3a3e8936cc7818329d9.jpg",
+      "iou": 0.5500166045699415,
+      "dice": 0.7096912419427788,
+      "precision": 0.956309745303374,
+      "recall": 0.5641937925978731,
+      "boundary_f1": 0.32362843162616683,
+      "boundary_precision": 0.4807776322671957,
+      "boundary_recall": 0.24390514192775872,
+      "hausdorff_distance": 85.63293758829018,
+      "gt_building_px": 26420,
+      "pred_building_px": 15587
+    }
+  ],
+  "building_size_analysis": {
+    "small": {
+      "building_count": 78,
+      "mean_area_px": 107.6,
+      "mean_iou": 0.3217,
+      "mean_dice": 0.4522,
+      "mean_recall": 0.4751
+    },
+    "medium": {
+      "building_count": 268,
+      "mean_area_px": 689.4,
+      "mean_iou": 0.3241,
+      "mean_dice": 0.4599,
+      "mean_recall": 0.4553
+    },
+    "large": {
+      "building_count": 78,
+      "mean_area_px": 3309.4,
+      "mean_iou": 0.3338,
+      "mean_dice": 0.4723,
+      "mean_recall": 0.476
+    }
+  },
+  "boundary_quality": {
+    "mean_boundary_f1": 0.2067,
+    "mean_hausdorff_distance_px": 91.78
+  },
+  "failure_analysis": [
+    {
+      "filename": "test_0870_Tripoli_2022_V2_R2C6_15000_15500_8500_9000_jpg.rf.e5cbf5858126caf71bcbbf2dc9fae428.jpg",
+      "iou": 3.984063743432644e-10,
+      "notes": [
+        "empty_prediction",
+        "missed_buildings",
+        "poor_boundary"
+      ]
+    },
+    {
+      "filename": "test_0921_Tripoli_2022_V2_R2C1_8000_8500_8000_8500_jpg.rf.f1f733a15d08386a867cd00b0431757d.jpg",
+      "iou": 0.010107325257366503,
+      "notes": [
+        "missed_buildings",
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0045_Tripoli_2022_V2_R3C5_1500_2000_10000_10500_jpg.rf.0e772b2de9cc22664593699467f12515.jpg",
+      "iou": 0.03273745444050453,
+      "notes": [
+        "missed_buildings",
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0739_Tripoli_2022_V2_R3C5_0_500_4000_4500_jpg.rf.c151f69a365d064931bd8341f581164d.jpg",
+      "iou": 0.037192142881923206,
+      "notes": [
+        "missed_buildings",
+        "high_false_positives",
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0607_Tripoli_2022_R2C1_1500_2000_5000_5500_jpg.rf.9ed71bd7ad49029837b7f0a3cd4df8ba.jpg",
+      "iou": 0.042451304015890035,
+      "notes": [
+        "missed_buildings",
+        "high_false_positives",
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0330_Tripoli_2022_V2_R2C2_6500_7000_11500_12000_jpg.rf.594ad6d58c0ea8c7532138fab00049ea.jpg",
+      "iou": 0.051615915388721484,
+      "notes": [
+        "missed_buildings",
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0719_Tripoli_2022_R2C1_3000_3500_11000_11500_jpg.rf.bb6cebfd8611887232eda68a9fcf80e1.jpg",
+      "iou": 0.17161691729606635,
+      "notes": [
+        "high_false_positives",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0328_Tripoli_2022_R3C1_8000_8500_1000_1500_jpg.rf.589e6c0d5efa2808241b19fc8cd8d88e.jpg",
+      "iou": 0.1782376026273109,
+      "notes": [
+        "missed_buildings",
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0531_Tripoli_2022_R2C2_10000_10500_10000_10500_jpg.rf.8b24f85c1f4f206ea14d0c7f5afb6d9c.jpg",
+      "iou": 0.23032495191468846,
+      "notes": [
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    },
+    {
+      "filename": "test_0545_Tripoli_2022_V2_R2C1_11500_12000_15500_16000_jpg.rf.8e2ee15d4c3cc5d19981fcc15e6e2cce.jpg",
+      "iou": 0.2429149798499675,
+      "notes": [
+        "missed_buildings",
+        "poor_boundary",
+        "large_shape_error"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+variant_id,method,growth_distance,pred_polygon_count,gt_polygon_count,area_iou,area_precision,area_recall,polygon_iou_matched,obj_f1_iou50,obj_precision_iou50,obj_recall_iou50,obj_f1_iou25,obj_precision_iou25,obj_recall_iou25,valid_polygon_count,invalid_repaired_count,tiny_removed_count,valid_pct,eval_time_s
+class1_only,"3-Class U-Net (Class-1 Only, No Growth)",0.0,1420,6344,0.2342,0.8887,0.2407,0.6106,0.11,0.3007,0.0673,0.2921,0.7986,0.1788,1420,0,4078,100.0,4.94
+growth_1px,3-Class U-Net (Class-1 + Boundary Growth 1px),1.5,4549,6344,0.4765,0.7237,0.5828,0.6734,0.4093,0.49,0.3514,0.6415,0.7681,0.5508,4549,0,924,100.0,11.06
+growth_2px,3-Class U-Net (Class-1 + Boundary Growth 2px),2.5,5269,6344,0.4835,0.6321,0.678,0.6389,0.3858,0.4251,0.3531,0.6729,0.7415,0.6159,5269,0,209,100.0,12.83

@@ -163,8 +163,8 @@ Three independent end-to-end runs executed with isolated analysis sessions on te
 ### 2. Clone & Install Dependencies
 ```bash
 # Clone the repository
-git clone https://github.com/ashwinm-design/spacenet-7-building-footprint-segmentation.git
-cd spacenet-7-building-footprint-segmentation
+git clone https://github.com/ashwinm-design/spacenet7-building-segmentation.git
+cd spacenet7-building-segmentation
 
 # Install Python requirements
 pip install -r requirements.txt

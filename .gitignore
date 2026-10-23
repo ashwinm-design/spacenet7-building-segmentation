@@ -67,6 +67,14 @@ data/processed*/
 results/prototype/api/*
 !results/prototype/api/8b8c724c7e/
 
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+
+# Logs
+*.log
+
 # IDE & OS Specific
 .vscode/
 .idea/
@@ -76,3 +84,4 @@ results/prototype/api/*
 .DS_Store
 Thumbs.db
 desktop.ini
+
